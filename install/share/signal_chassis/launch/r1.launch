@@ -1,0 +1,14 @@
+<launch>
+    <!-- argument-->
+    <arg name="chassis_feedback_topic" default="/feedback"/>
+    <arg name="cmd_vel_topic" default="/cmd_vel"/>
+    <arg name="eight_motor_control_topic"  default="/eight"/>
+    <arg name="controller_signal_topic" default="/controller"/>
+    <!-- node starter-->
+    <node name="chassis_node" pkg="signal_chassis" type="test_node" output="screen">
+        <param name="chassis_feedback_topic" value="$(arg chassis_feedback_topic)"/>
+        <param name="cmd_vel_topic" value="$(arg cmd_vel_topic)"/>
+        <param name="eight_motor_control_topic" value="$(arg eight_motor_control_topic)"/>
+        <param name="controller_signal_topic" value="$(arg controller_signal_topic)"/>
+    </node>
+</launch>

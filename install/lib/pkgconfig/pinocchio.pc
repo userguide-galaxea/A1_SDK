@@ -1,0 +1,22 @@
+prefix=/home/system/Documents/release_test/install
+exec_prefix=/home/system/Documents/release_test/install
+libdir=/home/system/Documents/release_test/install/lib
+bindir=/home/system/Documents/release_test/install/bin
+pkglibdir=/home/system/Documents/release_test/install/lib/pinocchio
+includedir=/home/system/Documents/release_test/install/include
+datarootdir=/home/system/Documents/release_test/install/share
+pkgdatarootdir=/home/system/Documents/release_test/install/share
+docdir=/home/system/Documents/release_test/install/share/doc/pinocchio
+doxygendocdir=/home/system/Documents/release_test/install/share/doc/pinocchio/doxygen-html
+
+Name: pinocchio
+Description: A fast and flexible implementation of Rigid Body Dynamics algorithms and their analytical derivatives
+URL: http://github.com/stack-of-tasks/pinocchio
+Version: 2.5.1
+Requires: eigen3 >= 3.0.5, urdfdom >= 0.2.0, hpp-fcl >= 1.4.0
+Conflicts: 
+Libs: -L${libdir}  -lpinocchio -L/usr/lib/x86_64-linux-gnu -lboost_filesystem -lboost_serialization -lboost_system
+Libs.private: 
+Cflags:  -I${includedir} -DPINOCCHIO_WITH_URDFDOM -DPINOCCHIO_WITH_HPP_FCL -DBOOST_MPL_LIMIT_LIST_SIZE=30
+
+

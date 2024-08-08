@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<sdf version="1.4">
+  <model name="target">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <link name="target_link">
+      <inertial>
+        <mass>1.0</mass>
+        <inertia> <!-- inertias are tricky to compute -->
+          <ixx>0.083</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
+          <ixy>0.0</ixy>         <!-- for a box: ixy = 0 -->
+          <ixz>0.0</ixz>         <!-- for a box: ixz = 0 -->
+          <iyy>0.083</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
+          <iyz>0.0</iyz>         <!-- for a box: iyz = 0 -->
+          <izz>0.083</izz>       <!-- for a box: izz = 0.083 * mass * (x*x + y*y) -->
+        </inertia>
+      </inertial>
+      <!-- <collision name="collision">
+        <geometry>
+          <box>
+            <size>.05 .05 .05</size>
+          </box>
+        </geometry>
+      </collision> -->
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>.05 .05 .05</size>
+          </box>
+        </geometry>
+        <material>
+          <script>Gazebo/Blue</script>
+        </material>
+      </visual>
+    </link>
+
+    <plugin filename="libgazebo_ros_p3d.so" name="target_ground_truth">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>50.0</updateRate>
+      <bodyName>target_link</bodyName>
+      <topicName>ground_truth/target_state</topicName>
+      <!-- <gaussianNoise>0.00</gaussianNoise> -->
+      <frameName>world</frameName>
+      <xyzOffsets>0 0 0</xyzOffsets>
+      <rpyOffsets>0 0 0</rpyOffsets>
+    </plugin>
+  </model>
+</sdf>

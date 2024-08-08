@@ -1,0 +1,45 @@
+<launch>
+  <arg
+    name="model" />
+  <arg name="rviz" default="true" />
+  <param
+    name="robot_description"
+    textfile="$(find mobiman)/urdf/A1/urdf/A1_URDF_0607_0028.urdf" />
+
+  <arg name="urdfFile" value="$(find mobiman)/urdf/A1/urdf/A1_URDF_0607_0028.urdf" />
+  <arg name="taskFile" value="$(find mobiman)/config/task.info" />
+  <arg name="angleFile" value="$(find mobiman)/data/joint_angles.txt" />
+  <arg name="eePose_sub_topic" value="/joint_states"/>
+  <arg name="eePose_pub_topic" value="/end_effector_pose"/>
+  <arg name="joint_states_sub_topic" value="/joint_states"/>
+  <arg name="arm_joint_command_topic" value="/arm_joint_command_host"/>
+  <!-- The library folder to generate CppAD codegen into -->
+  <arg name="libFolder" value="$(find mobiman)/auto_generated/x1_robot" />
+
+  <param name="taskFile" value="$(arg taskFile)" />
+  <param name="urdfFile" value="$(arg urdfFile)" />
+  <param name="libFolder" value="$(arg libFolder)" />
+  <param name="joint_states_sub_topic" value="$(arg joint_states_sub_topic)"/>
+  <param name="arm_joint_command_topic" value="$(arg arm_joint_command_topic)"/>
+  <!-- 启动 mpc node -->
+  <node pkg="mobiman" type="eeTrajTracker_demo_node"
+        name="eeTrajTracker_demo_node" output="screen" />
+  <node pkg="mobiman" type="eepose_pub_node" name="eePose_pub_node" output="screen">
+  </node>
+  <param name="eePose_sub_topic" value="$(arg eePose_sub_topic)"/>
+  <param name="eePose_pub_topic" value="$(arg eePose_pub_topic)"/>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf" output="screen"
+          args="0 0 0 0 0 0 world base_link"/>
+
+  <node if="$(arg rviz)" pkg="ocs2_mobile_manipulator_ros" type="mobile_manipulator_target" name="mobile_manipulator_target"
+      output="screen" launch-prefix="" />
+  
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz" />
+</launch>

@@ -1,0 +1,10 @@
+(cl:defpackage mobiman_msgs-srv
+  (:use )
+  (:export
+   "POSEARRAYSERVICE"
+   "<POSEARRAYSERVICE-REQUEST>"
+   "POSEARRAYSERVICE-REQUEST"
+   "<POSEARRAYSERVICE-RESPONSE>"
+   "POSEARRAYSERVICE-RESPONSE"
+  ))
+

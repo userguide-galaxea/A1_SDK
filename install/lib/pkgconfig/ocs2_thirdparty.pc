@@ -1,0 +1,8 @@
+prefix=/home/system/Documents/release_test/install
+
+Name: ocs2_thirdparty
+Description: Description of ocs2_thirdparty
+Version: 0.0.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

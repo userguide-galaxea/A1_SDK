@@ -1,0 +1,4 @@
+<launch>
+    <node name="chassis_node" pkg="signal_chassis" type="chassis_node" output="screen">
+    </node>
+</launch>

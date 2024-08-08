@@ -1,0 +1,9 @@
+float32 steer_angle_front_left
+float32 steer_angle_front_right
+float32 steer_angle_rear
+float32 drive_speed_front_left
+float32 drive_speed_front_right
+float32 drive_speed_rear
+float32 drive_angular_speed_front_left
+float32 drive_angular_speed_front_right
+float32 drive_angular_speed_rear

@@ -1,0 +1,4 @@
+float32 left_x_axis
+float32 left_y_axis
+float32 right_x_axis
+float32 right_y_axis

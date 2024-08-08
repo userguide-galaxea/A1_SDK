@@ -1,0 +1,8 @@
+prefix=/home/system/Documents/release_test/install
+
+Name: signal_torso
+Description: Description of signal_torso
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy sensor_msgs std_msgs

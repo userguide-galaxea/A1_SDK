@@ -1,0 +1,22 @@
+prefix=/home/system/Documents/release_test/install
+exec_prefix=/home/system/Documents/release_test/install
+libdir=/home/system/Documents/release_test/install/lib
+bindir=/home/system/Documents/release_test/install/bin
+pkglibdir=/home/system/Documents/release_test/install/lib/hpp-fcl
+includedir=/home/system/Documents/release_test/install/include
+datarootdir=/home/system/Documents/release_test/install/share
+pkgdatarootdir=/home/system/Documents/release_test/install/share
+docdir=/home/system/Documents/release_test/install/share/doc/hpp-fcl
+doxygendocdir=/home/system/Documents/release_test/install/share/doc/hpp-fcl/doxygen-html
+
+Name: hpp-fcl
+Description: HPP fork of FCL -- The Flexible Collision Library
+URL: https://github.com/humanoid-path-planner/hpp-fcl
+Version: 1.6.0
+Requires: eigen3 >= 3.0.0, octomap >= 1.6
+Conflicts: 
+Libs: -L${libdir}  -lhpp-fcl
+Libs.private: 
+Cflags:  -I${includedir} -DHPP_FCL_HAVE_OCTOMAP -DFCL_HAVE_OCTOMAP -DOCTOMAP_MAJOR_VERSION=1 -DOCTOMAP_MINOR_VERSION=9 -DOCTOMAP_PATCH_VERSION=8
+
+

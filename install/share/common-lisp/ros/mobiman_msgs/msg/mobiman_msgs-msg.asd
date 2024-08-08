@@ -1,0 +1,36 @@
+
+(cl:in-package :asdf)
+
+(defsystem "mobiman_msgs-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils :geometry_msgs-msg
+               :sensor_msgs-msg
+               :std_msgs-msg
+)
+  :components ((:file "_package")
+    (:file "ArmBasicCommand" :depends-on ("_package_ArmBasicCommand"))
+    (:file "_package_ArmBasicCommand" :depends-on ("_package"))
+    (:file "Button3d" :depends-on ("_package_Button3d"))
+    (:file "_package_Button3d" :depends-on ("_package"))
+    (:file "ButtonSemantics" :depends-on ("_package_ButtonSemantics"))
+    (:file "_package_ButtonSemantics" :depends-on ("_package"))
+    (:file "CameraDetection" :depends-on ("_package_CameraDetection"))
+    (:file "_package_CameraDetection" :depends-on ("_package"))
+    (:file "ChassisCommand" :depends-on ("_package_ChassisCommand"))
+    (:file "_package_ChassisCommand" :depends-on ("_package"))
+    (:file "ChassisCommandStamped" :depends-on ("_package_ChassisCommandStamped"))
+    (:file "_package_ChassisCommandStamped" :depends-on ("_package"))
+    (:file "JointPosition" :depends-on ("_package_JointPosition"))
+    (:file "_package_JointPosition" :depends-on ("_package"))
+    (:file "JointPositionStamped" :depends-on ("_package_JointPositionStamped"))
+    (:file "_package_JointPositionStamped" :depends-on ("_package"))
+    (:file "JointSpeed" :depends-on ("_package_JointSpeed"))
+    (:file "_package_JointSpeed" :depends-on ("_package"))
+    (:file "JointSpeedStamped" :depends-on ("_package_JointSpeedStamped"))
+    (:file "_package_JointSpeedStamped" :depends-on ("_package"))
+    (:file "Mask" :depends-on ("_package_Mask"))
+    (:file "_package_Mask" :depends-on ("_package"))
+    (:file "Panel3d" :depends-on ("_package_Panel3d"))
+    (:file "_package_Panel3d" :depends-on ("_package"))
+    (:file "arm_control" :depends-on ("_package_arm_control"))
+    (:file "_package_arm_control" :depends-on ("_package"))
+  ))

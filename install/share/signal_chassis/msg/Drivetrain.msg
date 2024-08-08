@@ -1,0 +1,13 @@
+float32 steer_angle_fl
+float32 steer_angle_fr
+float32 steer_angle_rl
+float32 steer_angle_rr
+float32 drive_speed_fl
+float32 drive_speed_fr
+float32 drive_speed_rl
+float32 drive_speed_rr
+float32 drive_angular_speed_fl
+float32 drive_angular_speed_fr
+float32 drive_angular_speed_rl
+float32 drive_angular_speed_rr
+int32 motion_mode
