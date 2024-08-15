@@ -1,0 +1,8 @@
+prefix=/home/gerunze/sdk/catkin/install
+
+Name: ocs2_qp_solver
+Description: Description of ocs2_qp_solver
+Version: 0.0.0
+Cflags: -I${prefix}/include -I/usr/include/eigen3
+Libs: -L${prefix}/lib -locs2_qp_solver
+Requires: ocs2_core ocs2_oc

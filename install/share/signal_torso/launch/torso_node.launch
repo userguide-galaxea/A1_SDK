@@ -1,0 +1,21 @@
+<launch>
+    <arg name="serial_port_path"           default="/dev/torso"/>
+    <arg name="feedback_topic"       default="/torso_feedback"/>
+    <arg name="control_topic"        default="/torso_control"/>
+    <arg name="status_topic"         default="/torso_status"/>
+    <arg name="joint_names"                default="joint1,joint2,joint3,joint4"/>
+    <arg name="baud_rate"                  default="1000000" />
+    
+
+    <!-- node starter-->
+    <node pkg="signal_torso" type="signal_torso_node" name="torso_node" output="screen">
+        <param name="serial_port_path"        value="$(arg serial_port_path)"/>
+        <param name="feedback_topic"    value="$(arg feedback_topic)"/>
+        <param name="control_topic"     value="$(arg control_topic)"/>
+        <param name="status_topic"      value="$(arg status_topic)"/>
+        <param name="joint_names"             value="$(arg joint_names)"/>
+        <param name="baud_rate"               value="$(arg baud_rate)"/>
+    </node>
+    <node pkg="signal_torso" type="controller2torsoSpeedCmd.py" name="controller_pub" output="screen">
+    </node>
+</launch>

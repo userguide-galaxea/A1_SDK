@@ -1,0 +1,8 @@
+prefix=/home/gerunze/sdk/catkin/install
+
+Name: mobiman_msgs
+Description: Description of mobiman_msgs
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs geometry_msgs sensor_msgs message_runtime

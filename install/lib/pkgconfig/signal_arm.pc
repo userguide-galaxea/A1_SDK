@@ -1,0 +1,8 @@
+prefix=/home/gerunze/sdk/catkin/install
+
+Name: signal_arm
+Description: Description of signal_arm
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy sensor_msgs std_msgs message_runtime

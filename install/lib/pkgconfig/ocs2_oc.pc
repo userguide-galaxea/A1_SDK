@@ -1,0 +1,8 @@
+prefix=/home/gerunze/sdk/catkin/install
+
+Name: ocs2_oc
+Description: Description of ocs2_oc
+Version: 0.0.0
+Cflags: -I${prefix}/include -I/usr/include/eigen3 -I/usr/include
+Libs: -L${prefix}/lib -locs2_oc /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0 /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+Requires: ocs2_core

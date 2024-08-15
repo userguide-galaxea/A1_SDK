@@ -1,0 +1,30 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 100
+
+wheel_chassis_controller:
+  type    : wheel_chassis_controller/WheelChassisController
+  fl_drive: 'wheel_fl_joint'
+  fr_drive: 'wheel_fr_joint'
+  rl_drive: 'wheel_rl_joint'
+  rr_drive: 'wheel_rr_joint'
+  fl_steer: 'steer_fl_joint'
+  fr_steer: 'steer_fr_joint'
+  rl_steer: 'steer_rl_joint'
+  rr_steer: 'steer_rr_joint'
+  publish_rate: 50
+
+arm_basic_controller:
+  type  : arm_basic_controller/ArmBasicController
+  joint_names: [
+    'seg1_to_seg2',
+    'seg2_to_seg3',
+    'seg3_to_seg4',
+    'seg4_to_seg5',
+    'seg5_to_seg6',
+    'seg6_to_seg7',
+    'finger1_joint',
+    'finger2_joint',
+  ]
+
+  publish_rate: 50

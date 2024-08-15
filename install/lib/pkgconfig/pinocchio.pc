@@ -1,0 +1,22 @@
+prefix=/home/gerunze/sdk/catkin/install
+exec_prefix=/home/gerunze/sdk/catkin/install
+libdir=/home/gerunze/sdk/catkin/install/lib
+bindir=/home/gerunze/sdk/catkin/install/bin
+pkglibdir=/home/gerunze/sdk/catkin/install/lib/pinocchio
+includedir=/home/gerunze/sdk/catkin/install/include
+datarootdir=/home/gerunze/sdk/catkin/install/share
+pkgdatarootdir=/home/gerunze/sdk/catkin/install/share
+docdir=/home/gerunze/sdk/catkin/install/share/doc/pinocchio
+doxygendocdir=/home/gerunze/sdk/catkin/install/share/doc/pinocchio/doxygen-html
+
+Name: pinocchio
+Description: A fast and flexible implementation of Rigid Body Dynamics algorithms and their analytical derivatives
+URL: http://github.com/stack-of-tasks/pinocchio
+Version: 2.5.1
+Requires: eigen3 >= 3.0.5, urdfdom >= 0.2.0, hpp-fcl >= 1.4.0
+Conflicts: 
+Libs: -L${libdir}  -lpinocchio -L/usr/lib/x86_64-linux-gnu -lboost_filesystem -lboost_serialization -lboost_system
+Libs.private: 
+Cflags:  -I${includedir} -DPINOCCHIO_WITH_URDFDOM -DPINOCCHIO_WITH_HPP_FCL -DBOOST_MPL_LIMIT_LIST_SIZE=30
+
+

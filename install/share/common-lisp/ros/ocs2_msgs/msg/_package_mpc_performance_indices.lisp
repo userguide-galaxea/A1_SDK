@@ -1,0 +1,16 @@
+(cl:in-package ocs2_msgs-msg)
+(cl:export '(INITTIME-VAL
+          INITTIME
+          MERIT-VAL
+          MERIT
+          COST-VAL
+          COST
+          DYNAMICSVIOLATIONSSE-VAL
+          DYNAMICSVIOLATIONSSE
+          EQUALITYCONSTRAINTSSSE-VAL
+          EQUALITYCONSTRAINTSSSE
+          EQUALITYLAGRANGIAN-VAL
+          EQUALITYLAGRANGIAN
+          INEQUALITYLAGRANGIAN-VAL
+          INEQUALITYLAGRANGIAN
+))
