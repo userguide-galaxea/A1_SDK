@@ -1,4 +1,4 @@
-prefix=/home/system/Documents/release_test/install
+prefix=/home/gerunze/sdk/catkin/install
 
 Name: ocs2_qp_solver
 Description: Description of ocs2_qp_solver

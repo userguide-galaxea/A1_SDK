@@ -1,5 +1,5 @@
 <launch>
-    <arg name="serial_port_path"           default="/dev/ttyACM0"/>
+    <arg name="serial_port_path"           default="/dev/torso"/>
     <arg name="feedback_topic"       default="/torso_feedback"/>
     <arg name="control_topic"        default="/torso_control"/>
     <arg name="status_topic"         default="/torso_status"/>

@@ -210,12 +210,12 @@ inputCost
       fullyActuatedFloatingArmManipulator
       {
         scaling 1e-2
-        (0,0)  5.0  ; position x
-        (1,1)  5.0  ; position y
-        (2,2)  5.0  ; position z
-        (3,3)  5.0  ; euler angle z
-        (4,4)  5.0  ; euler angle y
-        (5,5)  5.0  ; euler angle x
+        (0,0)  2.0  ; position x
+        (1,1)  2.0  ; position y
+        (2,2)  2.0  ; position z
+        (3,3)  2.0  ; euler angle z
+        (4,4)  2.0  ; euler angle y
+        (5,5)  2.0  ; euler angle x
       }
 
       wheelBasedMobileManipulator
@@ -231,12 +231,12 @@ inputCost
     {
       scaling 1e-2
 
-      (0,0)  1.0  ; arm_1 velocity
-      (1,1)  1.0  ; arm_2 velocity
-      (2,2)  1.0  ; arm_3 velocity
-      (3,3)  1.0  ; arm_4 velocity
-      (4,4)  1.0  ; arm_5 velocity
-      (5,5)  1.0  ; arm_6 velocity
+      (0,0)  5.0  ; arm_1 velocity
+      (1,1)  5.0  ; arm_2 velocity
+      (2,2)  5.0  ; arm_3 velocity
+      (3,3)  0.5  ; arm_4 velocity
+      (4,4)  0.5  ; arm_5 velocity
+      (5,5)  0.5  ; arm_6 velocity
     }
   }
 }
@@ -336,12 +336,12 @@ jointVelocityLimits
     ; velocity limits for the arm DOFs
     arm
     {
-      (0,0)  -2.0    ; arm_1 [rad/s]
-      (1,0)  -2.0           ; arm_2 [rad/s]
-      (2,0)  -2.0           ; arm_3 [rad/s]
-      (3,0)  -2.0           ; arm_4 [rad/s]
-      (4,0)  -2.0           ; arm_5 [rad/s]
-      (5,0)  -2.0           ; arm_6 [rad/s]
+      (0,0)  -6.0    ; arm_1 [rad/s]
+      (1,0)  -6.0           ; arm_2 [rad/s]
+      (2,0)  -6.0           ; arm_3 [rad/s]
+      (3,0)  -7.0           ; arm_4 [rad/s]
+      (4,0)  -7.0           ; arm_5 [rad/s]
+      (5,0)  -7.0           ; arm_6 [rad/s]
     }
   }
 
@@ -378,12 +378,12 @@ jointVelocityLimits
     ; velocity limits for the arm DOFs
     arm
     {
-      (0,0)  2.0     ; arm_1 [rad/s]
-      (1,0)  2.0           ; arm_2 [rad/s]
-      (2,0)  2.0           ; arm_3 [rad/s]
-      (3,0)  2.0           ; arm_4 [rad/s]
-      (4,0)  2.0           ; arm_5 [rad/s]
-      (5,0)  2.0           ; arm_6 [rad/s]
+      (0,0)  6.0     ; arm_1 [rad/s]
+      (1,0)  6.0           ; arm_2 [rad/s]
+      (2,0)  6.0           ; arm_3 [rad/s]
+      (3,0)  7.0           ; arm_4 [rad/s]
+      (4,0)  7.0           ; arm_5 [rad/s]
+      (5,0)  7.0           ; arm_6 [rad/s]
     }
   }
 }

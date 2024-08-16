@@ -67,14 +67,14 @@ set(URDF_R1_V1_0_4_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(URDF_R1_V1_0_4_SOURCE_PREFIX /home/system/Documents/release_test/src/mobiman/urdf/R1)
-  set(URDF_R1_V1_0_4_DEVEL_PREFIX /home/system/Documents/release_test/devel/.private/mobiman)
+  set(URDF_R1_V1_0_4_SOURCE_PREFIX /home/gerunze/sdk/catkin/src/mobiman/urdf/R1)
+  set(URDF_R1_V1_0_4_DEVEL_PREFIX /home/gerunze/sdk/catkin/devel/.private/mobiman)
   set(URDF_R1_V1_0_4_INSTALL_PREFIX "")
   set(URDF_R1_V1_0_4_PREFIX ${URDF_R1_V1_0_4_DEVEL_PREFIX})
 else()
   set(URDF_R1_V1_0_4_SOURCE_PREFIX "")
   set(URDF_R1_V1_0_4_DEVEL_PREFIX "")
-  set(URDF_R1_V1_0_4_INSTALL_PREFIX /home/system/Documents/release_test/install)
+  set(URDF_R1_V1_0_4_INSTALL_PREFIX /home/gerunze/sdk/catkin/install)
   set(URDF_R1_V1_0_4_PREFIX ${URDF_R1_V1_0_4_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/system/Documents/release_test/install/lib;/home/system/Documents/release_test/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/gerunze/sdk/catkin/install/lib;/home/gerunze/sdk/catkin/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

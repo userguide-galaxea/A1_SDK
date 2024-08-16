@@ -67,14 +67,14 @@ set(ocs2_mobile_manipulator_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ocs2_mobile_manipulator_SOURCE_PREFIX /home/system/Documents/release_test/src/ocs2/ocs2_robotic_examples/ocs2_mobile_manipulator)
-  set(ocs2_mobile_manipulator_DEVEL_PREFIX /home/system/Documents/release_test/devel/.private/ocs2_mobile_manipulator)
+  set(ocs2_mobile_manipulator_SOURCE_PREFIX /home/gerunze/sdk/catkin/src/ocs2/ocs2_robotic_examples/ocs2_mobile_manipulator)
+  set(ocs2_mobile_manipulator_DEVEL_PREFIX /home/gerunze/sdk/catkin/devel/.private/ocs2_mobile_manipulator)
   set(ocs2_mobile_manipulator_INSTALL_PREFIX "")
   set(ocs2_mobile_manipulator_PREFIX ${ocs2_mobile_manipulator_DEVEL_PREFIX})
 else()
   set(ocs2_mobile_manipulator_SOURCE_PREFIX "")
   set(ocs2_mobile_manipulator_DEVEL_PREFIX "")
-  set(ocs2_mobile_manipulator_INSTALL_PREFIX /home/system/Documents/release_test/install)
+  set(ocs2_mobile_manipulator_INSTALL_PREFIX /home/gerunze/sdk/catkin/install)
   set(ocs2_mobile_manipulator_PREFIX ${ocs2_mobile_manipulator_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(ocs2_mobile_manipulator_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "include;/usr/include/eigen3;/usr/include;/home/system/Documents/release_test/install/include;/opt/ros/noetic/include " STREQUAL " ")
+if(NOT "include;/usr/include/eigen3;/usr/include;/home/gerunze/sdk/catkin/install/include;/opt/ros/noetic/include " STREQUAL " ")
   set(ocs2_mobile_manipulator_INCLUDE_DIRS "")
-  set(_include_dirs "include;/usr/include/eigen3;/usr/include;/home/system/Documents/release_test/install/include;/opt/ros/noetic/include")
+  set(_include_dirs "include;/usr/include/eigen3;/usr/include;/home/gerunze/sdk/catkin/install/include;/opt/ros/noetic/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/system/Documents/release_test/install/lib;/home/system/Documents/release_test/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/gerunze/sdk/catkin/install/lib;/home/gerunze/sdk/catkin/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

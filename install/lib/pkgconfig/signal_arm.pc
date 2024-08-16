@@ -1,4 +1,4 @@
-prefix=/home/system/Documents/release_test/install
+prefix=/home/gerunze/sdk/catkin/install
 
 Name: signal_arm
 Description: Description of signal_arm

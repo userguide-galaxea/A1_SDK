@@ -1,8 +1,8 @@
-:#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import rospy
 from sensor_msgs.msg import Joy
-from signal_chassis import controller_signal_stamped
+from signal_chassis.msg import controller_signal_stamped
 from geometry_msgs.msg import Twist
 import math
 
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     rospy.init_node('joy_to_cmd_vel_node')
 
     # 订阅 joy 话题
-    rospy.Subscriber("/controller", DrivetrainStamped_r1, joy_callback)
+    rospy.Subscriber("/controller", controller_signal_stamped, joy_callback)
 
     # 创建一个发布者，发布速度命令到 /cmd_vel 话题上
     pub = rospy.Publisher('/target_torso_speed', Twist, queue_size=10)

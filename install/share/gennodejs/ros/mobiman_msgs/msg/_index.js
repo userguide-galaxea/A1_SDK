@@ -1,32 +1,32 @@
 
 "use strict";
 
-let JointSpeed = require('./JointSpeed.js');
+let arm_control = require('./arm_control.js');
+let JointPosition = require('./JointPosition.js');
 let ButtonSemantics = require('./ButtonSemantics.js');
 let ArmBasicCommand = require('./ArmBasicCommand.js');
-let Panel3d = require('./Panel3d.js');
-let arm_control = require('./arm_control.js');
-let CameraDetection = require('./CameraDetection.js');
-let JointPosition = require('./JointPosition.js');
 let Button3d = require('./Button3d.js');
-let JointSpeedStamped = require('./JointSpeedStamped.js');
-let Mask = require('./Mask.js');
 let JointPositionStamped = require('./JointPositionStamped.js');
-let ChassisCommandStamped = require('./ChassisCommandStamped.js');
+let JointSpeed = require('./JointSpeed.js');
+let Panel3d = require('./Panel3d.js');
+let Mask = require('./Mask.js');
+let CameraDetection = require('./CameraDetection.js');
+let JointSpeedStamped = require('./JointSpeedStamped.js');
 let ChassisCommand = require('./ChassisCommand.js');
+let ChassisCommandStamped = require('./ChassisCommandStamped.js');
 
 module.exports = {
-  JointSpeed: JointSpeed,
+  arm_control: arm_control,
+  JointPosition: JointPosition,
   ButtonSemantics: ButtonSemantics,
   ArmBasicCommand: ArmBasicCommand,
-  Panel3d: Panel3d,
-  arm_control: arm_control,
-  CameraDetection: CameraDetection,
-  JointPosition: JointPosition,
   Button3d: Button3d,
-  JointSpeedStamped: JointSpeedStamped,
-  Mask: Mask,
   JointPositionStamped: JointPositionStamped,
-  ChassisCommandStamped: ChassisCommandStamped,
+  JointSpeed: JointSpeed,
+  Panel3d: Panel3d,
+  Mask: Mask,
+  CameraDetection: CameraDetection,
+  JointSpeedStamped: JointSpeedStamped,
   ChassisCommand: ChassisCommand,
+  ChassisCommandStamped: ChassisCommandStamped,
 };

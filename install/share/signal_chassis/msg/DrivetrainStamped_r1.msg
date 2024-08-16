@@ -1,2 +1,0 @@
-std_msgs/Header header
-Drivetrain_r1 data
