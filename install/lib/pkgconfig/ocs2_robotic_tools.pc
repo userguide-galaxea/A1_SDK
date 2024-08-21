@@ -1,4 +1,4 @@
-prefix=/home/gerunze/sdk/catkin/install
+prefix=/home/glxrobot/catkin/install
 
 Name: ocs2_robotic_tools
 Description: Description of ocs2_robotic_tools

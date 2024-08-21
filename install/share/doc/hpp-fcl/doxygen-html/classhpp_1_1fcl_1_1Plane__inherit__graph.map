@@ -1,0 +1,5 @@
+<map id="hpp::fcl::Plane" name="hpp::fcl::Plane">
+<area shape="rect" id="node1" title="Infinite plane." alt="" coords="47,155,162,181"/>
+<area shape="rect" id="node2" href="$classhpp_1_1fcl_1_1ShapeBase.html" title="Base class for all basic geometric shapes." alt="" coords="29,80,180,107"/>
+<area shape="rect" id="node3" href="$classhpp_1_1fcl_1_1CollisionGeometry.html" title="The geometry for the object for collision or distance computation." alt="" coords="5,5,204,32"/>
+</map>

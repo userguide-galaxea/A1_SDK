@@ -1,13 +1,13 @@
-prefix=/home/gerunze/sdk/catkin/install
-exec_prefix=/home/gerunze/sdk/catkin/install
-libdir=/home/gerunze/sdk/catkin/install/lib
-bindir=/home/gerunze/sdk/catkin/install/bin
-pkglibdir=/home/gerunze/sdk/catkin/install/lib/pinocchio
-includedir=/home/gerunze/sdk/catkin/install/include
-datarootdir=/home/gerunze/sdk/catkin/install/share
-pkgdatarootdir=/home/gerunze/sdk/catkin/install/share
-docdir=/home/gerunze/sdk/catkin/install/share/doc/pinocchio
-doxygendocdir=/home/gerunze/sdk/catkin/install/share/doc/pinocchio/doxygen-html
+prefix=/home/glxrobot/catkin/install
+exec_prefix=/home/glxrobot/catkin/install
+libdir=/home/glxrobot/catkin/install/lib
+bindir=/home/glxrobot/catkin/install/bin
+pkglibdir=/home/glxrobot/catkin/install/lib/pinocchio
+includedir=/home/glxrobot/catkin/install/include
+datarootdir=/home/glxrobot/catkin/install/share
+pkgdatarootdir=/home/glxrobot/catkin/install/share
+docdir=/home/glxrobot/catkin/install/share/doc/pinocchio
+doxygendocdir=/home/glxrobot/catkin/install/share/doc/pinocchio/doxygen-html
 
 Name: pinocchio
 Description: A fast and flexible implementation of Rigid Body Dynamics algorithms and their analytical derivatives

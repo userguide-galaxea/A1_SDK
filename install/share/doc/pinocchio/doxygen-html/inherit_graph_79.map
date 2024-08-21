@@ -1,0 +1,29 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,1055,140,1082"/>
+<area shape="rect" id="node2" href="$structboost_1_1has__nothrow__constructor_3_01_1_1pinocchio_1_1JointDataCompositeTpl_3_01Scalar_0bc80c74bf92e818a68b58872ed9ea48e.html" title=" " alt="" coords="213,5,470,76"/>
+<area shape="rect" id="node3" href="$structboost_1_1has__nothrow__constructor_3_01_1_1pinocchio_1_1JointDataFreeFlyerTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="232,101,451,157"/>
+<area shape="rect" id="node4" href="$structboost_1_1has__nothrow__constructor_3_01_1_1pinocchio_1_1JointDataPlanarTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="233,181,449,237"/>
+<area shape="rect" id="node5" href="$structboost_1_1has__nothrow__constructor_3_01_1_1pinocchio_1_1JointDataPrismaticTpl_3_01Scalar_00_01Options_00_01axis_01_4_01_4.html" title=" " alt="" coords="223,261,459,317"/>
+<area shape="rect" id="node6" href="$structboost_1_1has__nothrow__constructor_3_01_1_1pinocchio_1_1JointDataPrismaticUnalignedTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="216,341,467,397"/>
+<area shape="rect" id="node7" href="$structboost_1_1has__nothrow__constructor_3_01_1_1pinocchio_1_1JointDataRevoluteUnboundedTpl_3_01bfe41f6e549f927f0c03e14e6020a7a7.html" title=" " alt="" coords="225,421,458,492"/>
+<area shape="rect" id="node8" href="$structboost_1_1has__nothrow__constructor_3_01_1_1pinocchio_1_1JointModelCompositeTpl_3_01Scalar_eadee784e07bc93a4516964d2585fb38.html" title=" " alt="" coords="188,517,495,573"/>
+<area shape="rect" id="node9" href="$structboost_1_1has__nothrow__constructor_3_01_1_1pinocchio_1_1JointModelFreeFlyerTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="232,597,451,653"/>
+<area shape="rect" id="node10" href="$structboost_1_1has__nothrow__constructor_3_01_1_1pinocchio_1_1JointModelPlanarTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="229,677,454,733"/>
+<area shape="rect" id="node11" href="$structboost_1_1has__nothrow__constructor_3_01_1_1pinocchio_1_1JointModelPrismaticTpl_3_01Scalar_0a44478ab976dd66bddf474070c29cfa.html" title=" " alt="" coords="219,757,464,813"/>
+<area shape="rect" id="node12" href="$structboost_1_1has__nothrow__constructor_3_01_1_1pinocchio_1_1JointModelPrismaticUnalignedTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="216,837,467,893"/>
+<area shape="rect" id="node13" href="$structboost_1_1has__nothrow__constructor_3_01_1_1pinocchio_1_1JointModelSphericalTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="219,917,463,973"/>
+<area shape="rect" id="node14" href="$structboost_1_1has__nothrow__constructor_3_01_1_1pinocchio_1_1JointModelSphericalZYXTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="219,997,463,1053"/>
+<area shape="rect" id="node15" href="$structboost_1_1has__nothrow__copy_3_01_1_1pinocchio_1_1JointDataCompositeTpl_3_01Scalar_00_01Optd846906c282c288f6f0db5ae6a817190.html" title=" " alt="" coords="213,1077,470,1148"/>
+<area shape="rect" id="node16" href="$structboost_1_1has__nothrow__copy_3_01_1_1pinocchio_1_1JointDataFreeFlyerTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="232,1173,451,1229"/>
+<area shape="rect" id="node17" href="$structboost_1_1has__nothrow__copy_3_01_1_1pinocchio_1_1JointDataPlanarTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="241,1253,442,1309"/>
+<area shape="rect" id="node18" href="$structboost_1_1has__nothrow__copy_3_01_1_1pinocchio_1_1JointDataPrismaticUnalignedTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="216,1333,467,1389"/>
+<area shape="rect" id="node19" href="$structboost_1_1has__nothrow__copy_3_01_1_1pinocchio_1_1JointDataRevoluteUnboundedTpl_3_01Scalar_2ee43e1300242215d4285b557736cfb3.html" title=" " alt="" coords="225,1413,458,1484"/>
+<area shape="rect" id="node20" href="$structboost_1_1has__nothrow__copy_3_01_1_1pinocchio_1_1JointDataRevoluteUnboundedUnalignedTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="221,1508,462,1579"/>
+<area shape="rect" id="node21" href="$structboost_1_1has__nothrow__copy_3_01_1_1pinocchio_1_1JointDataSphericalTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="231,1603,451,1659"/>
+<area shape="rect" id="node22" href="$structboost_1_1has__nothrow__copy_3_01_1_1pinocchio_1_1JointModelCompositeTpl_3_01Scalar_00_01Op3d8d32a2ada9b19c9d45ed6f627c0f5d.html" title=" " alt="" coords="213,1684,470,1755"/>
+<area shape="rect" id="node23" href="$structboost_1_1has__nothrow__copy_3_01_1_1pinocchio_1_1JointModelFreeFlyerTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="232,1779,451,1835"/>
+<area shape="rect" id="node24" href="$structboost_1_1has__nothrow__copy_3_01_1_1pinocchio_1_1JointModelPlanarTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="236,1859,447,1915"/>
+<area shape="rect" id="node25" href="$structboost_1_1has__nothrow__copy_3_01_1_1pinocchio_1_1JointModelPrismaticUnalignedTpl_3_01Scalar_00_01Options_01_4_01_4.html" title=" " alt="" coords="216,1939,467,1995"/>
+<area shape="rect" id="node26" href="$structboost_1_1has__nothrow__copy_3_01_1_1pinocchio_1_1JointModelRevoluteTpl_3_01Scalar_00_01Options_00_01axis_01_4_01_4.html" title=" " alt="" coords="228,2019,455,2075"/>
+<area shape="rect" id="node27" href="$structpinocchio_1_1is__floating__point_3_01boost_1_1multiprecision_1_1number_3_01Backend_00_01ET_01_4_01_4.html" title=" " alt="" coords="239,2099,443,2155"/>
+</map>

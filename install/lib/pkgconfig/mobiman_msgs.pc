@@ -1,4 +1,4 @@
-prefix=/home/gerunze/sdk/catkin/install
+prefix=/home/glxrobot/catkin/install
 
 Name: mobiman_msgs
 Description: Description of mobiman_msgs

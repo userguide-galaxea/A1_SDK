@@ -1,0 +1,4 @@
+var structpinocchio_1_1traits_3_01JointDataRevoluteUnalignedTpl_3_01Scalar_00_01Options_01_4_01_4 =
+[
+    [ "JointDerived", "structpinocchio_1_1traits_3_01JointDataRevoluteUnalignedTpl_3_01Scalar_00_01Options_01_4_01_4.html#a23bf18177da01ca55335727f1ab9f599", null ]
+];

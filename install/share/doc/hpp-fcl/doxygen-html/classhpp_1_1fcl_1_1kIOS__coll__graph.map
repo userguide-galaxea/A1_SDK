@@ -1,0 +1,5 @@
+<map id="hpp::fcl::kIOS" name="hpp::fcl::kIOS">
+<area shape="rect" id="node1" title="A class describing the kIOS collision structure, which is a set of spheres." alt="" coords="99,109,207,136"/>
+<area shape="rect" id="node2" title="One sphere in kIOS." alt="" coords="5,5,152,47"/>
+<area shape="rect" id="node3" href="$classhpp_1_1fcl_1_1OBB.html" title="Oriented bounding box class." alt="" coords="176,13,283,39"/>
+</map>

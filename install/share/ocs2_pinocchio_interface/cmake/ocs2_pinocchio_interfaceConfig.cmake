@@ -67,14 +67,14 @@ set(ocs2_pinocchio_interface_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ocs2_pinocchio_interface_SOURCE_PREFIX /home/gerunze/sdk/catkin/src/ocs2/ocs2_pinocchio/ocs2_pinocchio_interface)
-  set(ocs2_pinocchio_interface_DEVEL_PREFIX /home/gerunze/sdk/catkin/devel/.private/ocs2_pinocchio_interface)
+  set(ocs2_pinocchio_interface_SOURCE_PREFIX /home/glxrobot/catkin/src/ocs2/ocs2_pinocchio/ocs2_pinocchio_interface)
+  set(ocs2_pinocchio_interface_DEVEL_PREFIX /home/glxrobot/catkin/devel/.private/ocs2_pinocchio_interface)
   set(ocs2_pinocchio_interface_INSTALL_PREFIX "")
   set(ocs2_pinocchio_interface_PREFIX ${ocs2_pinocchio_interface_DEVEL_PREFIX})
 else()
   set(ocs2_pinocchio_interface_SOURCE_PREFIX "")
   set(ocs2_pinocchio_interface_DEVEL_PREFIX "")
-  set(ocs2_pinocchio_interface_INSTALL_PREFIX /home/gerunze/sdk/catkin/install)
+  set(ocs2_pinocchio_interface_INSTALL_PREFIX /home/glxrobot/catkin/install)
   set(ocs2_pinocchio_interface_PREFIX ${ocs2_pinocchio_interface_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(ocs2_pinocchio_interface_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "include;/home/gerunze/sdk/catkin/install/include;/opt/ros/noetic/include;/usr/include;/usr/include/eigen3 " STREQUAL " ")
+if(NOT "include;/home/glxrobot/catkin/install/include;/opt/ros/noetic/include;/usr/include/eigen3 " STREQUAL " ")
   set(ocs2_pinocchio_interface_INCLUDE_DIRS "")
-  set(_include_dirs "include;/home/gerunze/sdk/catkin/install/include;/opt/ros/noetic/include;/usr/include;/usr/include/eigen3")
+  set(_include_dirs "include;/home/glxrobot/catkin/install/include;/opt/ros/noetic/include;/usr/include/eigen3")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/gerunze/sdk/catkin/install/lib;/home/gerunze/sdk/catkin/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/glxrobot/catkin/install/lib;/home/glxrobot/catkin/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

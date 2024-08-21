@@ -1,0 +1,6 @@
+<map id="hpp::fcl::DistanceResult" name="hpp::fcl::DistanceResult">
+<area shape="rect" id="node1" title="distance result" alt="" coords="58,199,234,225"/>
+<area shape="rect" id="node2" href="$structhpp_1_1fcl_1_1QueryResult.html" title="base class for all query results" alt="" coords="5,95,164,121"/>
+<area shape="rect" id="node3" href="$classhpp_1_1fcl_1_1CollisionGeometry.html" title="The geometry for the object for collision or distance computation." alt="" coords="188,95,387,121"/>
+<area shape="rect" id="node4" href="$classhpp_1_1fcl_1_1AABB.html" title="A class describing the AABB collision structure, which is a box in 3D space determined by two diagona..." alt="" coords="230,5,345,32"/>
+</map>

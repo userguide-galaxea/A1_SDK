@@ -1,4 +1,4 @@
-prefix=/home/gerunze/sdk/catkin/install
+prefix=/home/glxrobot/catkin/install
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild

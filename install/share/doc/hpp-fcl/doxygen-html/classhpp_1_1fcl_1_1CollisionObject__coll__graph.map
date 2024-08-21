@@ -1,0 +1,5 @@
+<map id="hpp::fcl::CollisionObject" name="hpp::fcl::CollisionObject">
+<area shape="rect" id="node1" title="the object for collision or distance computation, contains the geometry and the transform information" alt="" coords="55,95,231,121"/>
+<area shape="rect" id="node2" href="$classhpp_1_1fcl_1_1AABB.html" title="A class describing the AABB collision structure, which is a box in 3D space determined by two diagona..." alt="" coords="5,5,120,32"/>
+<area shape="rect" id="node3" href="$classhpp_1_1fcl_1_1Transform3f.html" title="Simple transform class used locally by InterpMotion." alt="" coords="144,5,301,32"/>
+</map>

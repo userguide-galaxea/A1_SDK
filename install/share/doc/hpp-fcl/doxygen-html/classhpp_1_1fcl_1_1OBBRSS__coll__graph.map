@@ -1,0 +1,5 @@
+<map id="hpp::fcl::OBBRSS" name="hpp::fcl::OBBRSS">
+<area shape="rect" id="node1" title="Class merging the OBB and RSS, can handle collision and distance simultaneously." alt="" coords="55,95,186,121"/>
+<area shape="rect" id="node2" href="$classhpp_1_1fcl_1_1RSS.html" title="A class for rectangle sphere&#45;swept bounding volume." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node3" href="$classhpp_1_1fcl_1_1OBB.html" title="Oriented bounding box class." alt="" coords="133,5,239,32"/>
+</map>

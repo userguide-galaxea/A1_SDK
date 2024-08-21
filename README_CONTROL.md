@@ -19,6 +19,8 @@ This project aims to provide control interfaces for the joints and end-effector 
 ## End-Effector Movement Example
 Start the end-effector movement script first. This will launch an RViz instance for the A1 robotic arm, with joints initially at zero position.
 
+Please follow the steps below to run the demo:
+
 ```bash
 sudo apt install ros-noetic-trac-ik
 cd install/
@@ -37,6 +39,12 @@ In the launch file:
 `/arm_joint_command_host` represents the topic to publish motor commands.
 
 Publish messages to the end-effector movement. The message name is `/a1_ee_target`, which is non-blocking and can be continuously published. The end-effector of the robotic arm can move continuously, but ensure it does not deviate too far from the current end-effector position.
+
+Please follow the steps below to run the demo:
+1. `source install/setup.bash`
+2. `cd /install/lib/mobiman`
+3. `python3 eeTrackerdemo.py`
+
 
 ```bash
 rostopic pub /a1_ee_target geometry_msgs/PoseStamped "{
@@ -94,7 +102,7 @@ if __name__ == '__main__':
 Start the end-effector trajectory movement script first. This will launch an RViz instance for the A1 robotic arm, with joints initially at zero position.
 
 ```bash
-cd release/install
+cd install
 source setup.bash
 roslaunch mobiman eeTrajTrackerdemo.launch
 ```
@@ -109,53 +117,17 @@ In the launch file:
 ```
 `/arm_joint_command_host` represents the topic to publish motor commands.
 
-Publish messages for end-effector trajectory movement. Ensure the trajectory does not deviate from the current end-effector position. The message name is `/arm_target_trajectory`, which is non-blocking and can be continuously published. However, it is recommended to wait for the trajectory movement to complete before publishing to avoid inaccurate tracking.
+Publish messages for end-effector trajectory movement. 
+Ensure the trajectory does not deviate from the current end-effector position. 
+The message name is `/arm_target_trajectory`, which is non-blocking and can be continuously published. However, 
+it is recommended to wait for the trajectory movement to complete before publishing to avoid inaccurate tracking.
 
-```cpp
-int main(int argc, char** argv)
-{
-    ros::init(argc, argv, "pose_array_publisher");
-    ros::NodeHandle nh;
-    ros::Publisher pose_pub = nh.advertise<geometry_msgs::PoseArray>("/arm_target_trajectory", 10);
-    // Wait for subscribers to connect
-    ros::Rate wait_rate(10);
-    while (pose_pub.getNumSubscribers() == 0)
-    {
-        wait_rate.sleep();
-    }
-    geometry_msgs::PoseArray poseArrayMsg;
-    geometry_msgs::Pose pose1;
-    pose1.position.x = 0.08;
-    pose1.position.y = 0.0;
-    pose1.position.z = 0.3;
-    pose1.orientation.w = 0.5;
-    pose1.orientation.x = 0.5;
-    pose1.orientation.y = 0.5;
-    pose1.orientation.z = 0.5;
-    geometry_msgs::Pose pose2;
-    pose2.position.x = 0.08;
-    pose2.position.y = 0.0;
-    pose2.position.z = 0.4;
-    pose2.orientation.w = 0.5;
-    pose2.orientation.x = 0.5;
-    pose2.orientation.y = 0.5;
-    pose2.orientation.z = 0.5;
-    geometry_msgs::Pose pose3;
-    pose3.position.x = 0.08;
-    pose3.position.y = 0.0;
-    pose3.position.z = 0.54;
-    pose3.orientation.w = 0.5;
-    pose3.orientation.x = 0.5;
-    pose3.orientation.y = 0.5;
-    pose3.orientation.z = 0.5;
-    poseArrayMsg.poses.push_back(pose1);
-    poseArrayMsg.poses.push_back(pose2);
-    poseArrayMsg.poses.push_back(pose3);
-    pose_pub.publish(poseArrayMsg);
-    ROS_INFO("Published PoseArray with 3 poses");
-    return 0;
-}
-```
+Please follow the steps below to run the demo:
+1. `source install/setup.bash`
+2. `cd /install/lib/mobiman`
+3. `./eeTrajTracker_pub`
+
+Then you can see actual effect as shown in the video below.
 
 ### Actual Effect as Shown in the Video
 <video width="600" controls>
@@ -166,7 +138,7 @@ int main(int argc, char** argv)
 Start the joint movement script first. This will launch an RViz instance for the A1 robotic arm, with joints initially at zero position.
 
 ```bash
-cd release/install
+cd install
 source setup.bash
 roslaunch mobiman jointTrackerdemo.launch
 ```
@@ -182,6 +154,11 @@ In the launch file:
 `/arm_joint_command_host` represents the topic to publish motor commands.
 
 Publish messages for joint movement. The message name is `/arm_joint_target_position`, which is non-blocking and can be continuously published. The robotic arm joints can move continuously.
+
+Please follow the steps below to run the demo:
+1. `source install/setup.bash`
+2. `cd /install/lib/mobiman`
+3. `python3 jointTrackerdemo.py`
 
 ```python
 import rospy
