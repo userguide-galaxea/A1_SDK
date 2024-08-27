@@ -1,0 +1,4 @@
+<map id="hpp::fcl::DistanceRequest" name="hpp::fcl::DistanceRequest">
+<area shape="rect" id="node1" title="request to the distance computation" alt="" coords="5,80,193,107"/>
+<area shape="rect" id="node2" href="$structhpp_1_1fcl_1_1QueryRequest.html" title="base class for all query requests" alt="" coords="14,5,185,32"/>
+</map>

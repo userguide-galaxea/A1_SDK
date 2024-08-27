@@ -1,0 +1,5 @@
+<map id="hpp::fcl::Contact" name="hpp::fcl::Contact">
+<area shape="rect" id="node1" title="Contact information returned by collision." alt="" coords="41,199,169,225"/>
+<area shape="rect" id="node2" href="$classhpp_1_1fcl_1_1CollisionGeometry.html" title="The geometry for the object for collision or distance computation." alt="" coords="5,95,204,121"/>
+<area shape="rect" id="node3" href="$classhpp_1_1fcl_1_1AABB.html" title="A class describing the AABB collision structure, which is a box in 3D space determined by two diagona..." alt="" coords="47,5,162,32"/>
+</map>

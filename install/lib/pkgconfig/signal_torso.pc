@@ -1,4 +1,4 @@
-prefix=/home/gerunze/sdk/catkin/install
+prefix=/home/jiaruiqian/work/ws_0622/install
 
 Name: signal_torso
 Description: Description of signal_torso
