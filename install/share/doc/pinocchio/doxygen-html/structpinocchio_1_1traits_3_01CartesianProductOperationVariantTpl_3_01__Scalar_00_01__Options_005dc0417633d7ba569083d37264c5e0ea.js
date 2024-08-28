@@ -1,0 +1,7 @@
+var structpinocchio_1_1traits_3_01CartesianProductOperationVariantTpl_3_01__Scalar_00_01__Options_005dc0417633d7ba569083d37264c5e0ea =
+[
+    [ "Scalar", "structpinocchio_1_1traits_3_01CartesianProductOperationVariantTpl_3_01__Scalar_00_01__Options_005dc0417633d7ba569083d37264c5e0ea.html#aea29b63b6c32046ae9a471d82c5cf869", null ],
+    [ "Options", "structpinocchio_1_1traits_3_01CartesianProductOperationVariantTpl_3_01__Scalar_00_01__Options_005dc0417633d7ba569083d37264c5e0ea.html#a4f126a0a9b1d8c6a8f46a051ef8830bbac59641d0b7afd6206e201ea0829e9bf5", null ],
+    [ "NQ", "structpinocchio_1_1traits_3_01CartesianProductOperationVariantTpl_3_01__Scalar_00_01__Options_005dc0417633d7ba569083d37264c5e0ea.html#a4f126a0a9b1d8c6a8f46a051ef8830bbac958cb4360ef8160bda7c28aad04a885", null ],
+    [ "NV", "structpinocchio_1_1traits_3_01CartesianProductOperationVariantTpl_3_01__Scalar_00_01__Options_005dc0417633d7ba569083d37264c5e0ea.html#a4f126a0a9b1d8c6a8f46a051ef8830bba1b967f3b245b67e34271033ee507ec74", null ]
+];

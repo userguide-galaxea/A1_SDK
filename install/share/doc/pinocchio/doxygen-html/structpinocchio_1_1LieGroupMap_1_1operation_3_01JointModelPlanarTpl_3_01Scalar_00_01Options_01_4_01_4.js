@@ -1,0 +1,4 @@
+var structpinocchio_1_1LieGroupMap_1_1operation_3_01JointModelPlanarTpl_3_01Scalar_00_01Options_01_4_01_4 =
+[
+    [ "type", "structpinocchio_1_1LieGroupMap_1_1operation_3_01JointModelPlanarTpl_3_01Scalar_00_01Options_01_4_01_4.html#ae65d9b1f333a73a4f8ed3f2757c040e9", null ]
+];

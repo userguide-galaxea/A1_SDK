@@ -1,0 +1,11 @@
+<map id="DataTpl&lt; _Scalar, _Options, JointCollectionTpl &gt;" name="DataTpl&lt; _Scalar, _Options, JointCollectionTpl &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="976,121,1192,162"/>
+<area shape="rect" id="node2" href="$structpinocchio_1_1serialization_1_1Serializable.html" title=" " alt="" coords="607,5,777,61"/>
+<area shape="rect" id="node3" href="$structpinocchio_1_1Tensor.html" title=" " alt="" coords="623,86,761,127"/>
+<area shape="rect" id="node4" href="$structEigen_1_1array.html" title=" " alt="" coords="227,93,441,120"/>
+<area shape="rect" id="node5" href="$classpinocchio_1_1InertiaTpl.html" title=" " alt="" coords="621,151,763,193"/>
+<area shape="rect" id="node6" href="$classpinocchio_1_1Symmetric3Tpl.html" title=" " alt="" coords="229,159,439,185"/>
+<area shape="rect" id="node7" href="$classpinocchio_1_1ForceTpl.html" title=" " alt="" coords="589,217,795,244"/>
+<area shape="rect" id="node8" href="$classpinocchio_1_1ForceDense.html" title=" " alt="" coords="248,210,420,251"/>
+<area shape="rect" id="node9" href="$classpinocchio_1_1ForceBase.html" title=" " alt="" coords="5,210,177,251"/>
+</map>

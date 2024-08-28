@@ -1,0 +1,4 @@
+var structpinocchio_1_1CastType_3_01NewScalar_00_01JointModelPrismaticTpl_3_01Scalar_00_01Options_00_01axis_01_4_01_4 =
+[
+    [ "type", "structpinocchio_1_1CastType_3_01NewScalar_00_01JointModelPrismaticTpl_3_01Scalar_00_01Options_00_01axis_01_4_01_4.html#a2da2f4ce1552a4a13c196b2a6f41f459", null ]
+];

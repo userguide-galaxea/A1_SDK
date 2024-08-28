@@ -1,0 +1,4 @@
+var structpinocchio_1_1Serialize_3_01JointDataCompositeTpl_3_01Scalar_00_01Options_00_01JointCollectionTpl_01_4_01_4 =
+[
+    [ "run", "structpinocchio_1_1Serialize_3_01JointDataCompositeTpl_3_01Scalar_00_01Options_00_01JointCollectionTpl_01_4_01_4.html#af41ac25aada01cb9d371edbb6ad0d4a5", null ]
+];

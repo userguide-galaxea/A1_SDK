@@ -1,0 +1,4 @@
+var structpinocchio_1_1MotionAlgebraAction_3_01ConstraintTpl_3_01Dim_00_01Scalar_00_01Options_01_4_00_01MotionDerived_01_4 =
+[
+    [ "ReturnType", "structpinocchio_1_1MotionAlgebraAction_3_01ConstraintTpl_3_01Dim_00_01Scalar_00_01Options_01_4_00_01MotionDerived_01_4.html#a23d3547ba6b2e20bd3ee0215dd748015", null ]
+];
