@@ -1,4 +1,4 @@
-prefix=/home/jiaruiqian/work/ws_0622/install
+prefix=/home/gerunze/Downloads/catkin/install
 
 Name: signal_arm
 Description: Description of signal_arm

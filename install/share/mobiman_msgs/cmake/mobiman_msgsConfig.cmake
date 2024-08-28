@@ -67,14 +67,14 @@ set(mobiman_msgs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(mobiman_msgs_SOURCE_PREFIX /home/jiaruiqian/work/ws_0622/src/mobiman_msgs)
-  set(mobiman_msgs_DEVEL_PREFIX /home/jiaruiqian/work/ws_0622/devel/.private/mobiman_msgs)
+  set(mobiman_msgs_SOURCE_PREFIX /home/gerunze/Downloads/catkin/src/mobiman_msgs)
+  set(mobiman_msgs_DEVEL_PREFIX /home/gerunze/Downloads/catkin/devel/.private/mobiman_msgs)
   set(mobiman_msgs_INSTALL_PREFIX "")
   set(mobiman_msgs_PREFIX ${mobiman_msgs_DEVEL_PREFIX})
 else()
   set(mobiman_msgs_SOURCE_PREFIX "")
   set(mobiman_msgs_DEVEL_PREFIX "")
-  set(mobiman_msgs_INSTALL_PREFIX /home/jiaruiqian/work/ws_0622/install)
+  set(mobiman_msgs_INSTALL_PREFIX /home/gerunze/Downloads/catkin/install)
   set(mobiman_msgs_PREFIX ${mobiman_msgs_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/jiaruiqian/work/ws_0622/install/lib;/home/jiaruiqian/work/ws_0622/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/gerunze/Downloads/catkin/install/lib;/home/gerunze/Downloads/catkin/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

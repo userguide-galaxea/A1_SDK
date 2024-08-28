@@ -1,4 +1,0 @@
-var structpinocchio_1_1ConstraintForceOp_3_01ConstraintPrismaticTpl_3_01Scalar_00_01Options_00_01axis_01_4_00_01ForceDerived_01_4 =
-[
-    [ "ReturnType", "structpinocchio_1_1ConstraintForceOp_3_01ConstraintPrismaticTpl_3_01Scalar_00_01Options_00_01axis_01_4_00_01ForceDerived_01_4.html#a0e6ed0959c1428ded542b8ed572acf99", null ]
-];
