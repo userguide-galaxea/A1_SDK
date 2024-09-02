@@ -1,0 +1,6 @@
+<map id="hpp::fcl::Halfspace" name="hpp::fcl::Halfspace">
+<area shape="rect" id="node1" title="Half Space: this is equivalent to the Plane in ODE. The separation plane is defined as n * x = d; Poi..." alt="" coords="33,247,176,273"/>
+<area shape="rect" id="node2" href="$classhpp_1_1fcl_1_1ShapeBase.html" title="Base class for all basic geometric shapes." alt="" coords="29,171,180,197"/>
+<area shape="rect" id="node3" href="$classhpp_1_1fcl_1_1CollisionGeometry.html" title="The geometry for the object for collision or distance computation." alt="" coords="5,95,204,121"/>
+<area shape="rect" id="node4" href="$classhpp_1_1fcl_1_1AABB.html" title="A class describing the AABB collision structure, which is a box in 3D space determined by two diagona..." alt="" coords="47,5,162,32"/>
+</map>

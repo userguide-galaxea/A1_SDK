@@ -1,0 +1,4 @@
+var structpinocchio_1_1SE3GroupAction_3_01TransformTranslationTpl_3_01Scalar_00_01Options_01_4_01_4 =
+[
+    [ "ReturnType", "structpinocchio_1_1SE3GroupAction_3_01TransformTranslationTpl_3_01Scalar_00_01Options_01_4_01_4.html#aa00801bca386f07b2636a1b288b4d629", null ]
+];

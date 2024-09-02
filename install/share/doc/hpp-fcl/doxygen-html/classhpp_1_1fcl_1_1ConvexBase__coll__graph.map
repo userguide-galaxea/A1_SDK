@@ -1,0 +1,7 @@
+<map id="hpp::fcl::ConvexBase" name="hpp::fcl::ConvexBase">
+<area shape="rect" id="node1" title="Base for convex polytope." alt="" coords="159,275,317,301"/>
+<area shape="rect" id="node2" href="$classhpp_1_1fcl_1_1ShapeBase.html" title="Base class for all basic geometric shapes." alt="" coords="29,178,180,205"/>
+<area shape="rect" id="node3" href="$classhpp_1_1fcl_1_1CollisionGeometry.html" title="The geometry for the object for collision or distance computation." alt="" coords="5,95,204,121"/>
+<area shape="rect" id="node4" href="$classhpp_1_1fcl_1_1AABB.html" title="A class describing the AABB collision structure, which is a box in 3D space determined by two diagona..." alt="" coords="47,5,162,32"/>
+<area shape="rect" id="node5" href="$structhpp_1_1fcl_1_1ConvexBase_1_1Neighbors.html" title=" " alt="" coords="204,171,363,212"/>
+</map>

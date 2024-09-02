@@ -4,14 +4,14 @@
   <arg name="rviz" default="true" />
   <param
     name="robot_description"
-    textfile="$(find mobiman)/urdf/A1/urdf/A1_URDF_0607_0028.urdf" />
+    textfile="$(find mobiman)/urdf/A1/urdf/A1_URDF_0607_0028_no_gripper.urdf" />
 
-  <arg name="urdfFile" value="$(find mobiman)/urdf/A1/urdf/A1_URDF_0607_0028.urdf" />
+  <arg name="urdfFile" value="$(find mobiman)/urdf/A1/urdf/A1_URDF_0607_0028_no_gripper.urdf" />
   <arg name="taskFile" value="$(find mobiman)/config/task.info" />
 
-  <arg name="eePose_sub_topic" value="/joint_states"/>
+  <arg name="eePose_sub_topic" value="/joint_states_host"/>
   <arg name="eePose_pub_topic" value="/end_effector_pose"/>
-  <arg name="joint_states_sub_topic" value="/joint_states"/>
+  <arg name="joint_states_sub_topic" value="/joint_states_host"/>
   <arg name="arm_joint_command_topic" value="/arm_joint_command_host"/>
   <arg name="a1_ee_target_traj" value="/a1_ee_target_traj_1"/>
   <!-- The library folder to generate CppAD codegen into -->
@@ -28,6 +28,8 @@
     <param name="a1_ee_target_traj" value="$(arg a1_ee_target_traj)"/>
   </node>
   <node pkg="mobiman" type="eepose_pub_node" name="eePose_pub_node" output="screen">
+    <param name="urdfFile" value="$(arg urdfFile)"/>
+    <param name="ee_frame" value="arm_seg6"/>
     <param name="eePose_sub_topic" value="$(arg eePose_sub_topic)"/>
     <param name="eePose_pub_topic" value="$(arg eePose_pub_topic)"/>
   </node>
@@ -51,8 +53,10 @@
     <param name="a1_ee_target" value="$(arg a1_ee_target_1)"/>
   </node>
   <node pkg="mobiman" type="eepose_pub_node" name="eePose_pub_node_1" output="screen">
-    <param name="eePose_sub_topic_1" value="$(arg eePose_sub_topic)"/>
-    <param name="eePose_pub_topic_1" value="$(arg eePose_pub_topic)"/>
+    <param name="urdfFile" value="$(arg urdfFile)"/>
+    <param name="ee_frame" value="arm_seg6"/>
+    <param name="eePose_sub_topic" value="$(arg eePose_sub_topic_1)"/>
+    <param name="eePose_pub_topic" value="$(arg eePose_pub_topic_1)"/>
   </node> -->
   <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf" output="screen"
           args="0 0 0 0 0 0 world base_link"/>

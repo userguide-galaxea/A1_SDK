@@ -1,0 +1,5 @@
+<map id="hpp::fcl::TriangleP" name="hpp::fcl::TriangleP">
+<area shape="rect" id="node1" title="Triangle stores the points instead of only indices of points." alt="" coords="35,155,174,181"/>
+<area shape="rect" id="node2" href="$classhpp_1_1fcl_1_1ShapeBase.html" title="Base class for all basic geometric shapes." alt="" coords="29,80,180,107"/>
+<area shape="rect" id="node3" href="$classhpp_1_1fcl_1_1CollisionGeometry.html" title="The geometry for the object for collision or distance computation." alt="" coords="5,5,204,32"/>
+</map>

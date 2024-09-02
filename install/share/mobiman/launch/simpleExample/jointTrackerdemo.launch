@@ -1,7 +1,7 @@
 <launch>
   <arg name="model" />
 
-    <arg name="urdfFile" value="$(find mobiman)/urdf/A1/urdf/A1_URDF_0607_0028.urdf" />
+  <arg name="urdfFile" value="$(find mobiman)/urdf/A1/urdf/A1_URDF_0607_0028_no_gripper.urdf" />
   <arg name="taskFile" value="$(find mobiman)/config/task.info" />
   <arg name="libFolder" value="$(find mobiman)/auto_generated/x1_robot" />
   <arg name="eePose_sub_topic" value="/joint_states"/>
@@ -20,12 +20,14 @@
       <param name="libFolder" value="$(arg libFolder)" />
   </node>       
   <node pkg="mobiman" type="eepose_pub_node" name="eePose_pub_node" output="screen">
+    <param name="urdfFile" value="$(arg urdfFile)"/>
+    <param name="ee_frame" value="arm_seg6"/>
     <param name="eePose_sub_topic" value="$(arg eePose_sub_topic)"/>
     <param name="eePose_pub_topic" value="$(arg eePose_pub_topic)"/>
   </node>
   <param
     name="robot_description"
-    textfile="$(find mobiman)/urdf/A1/urdf/A1_URDF_0607_0028.urdf" />
+    textfile="$(find mobiman)/urdf/A1/urdf/A1_URDF_0607_0028_no_gripper.urdf" />
 
 
 

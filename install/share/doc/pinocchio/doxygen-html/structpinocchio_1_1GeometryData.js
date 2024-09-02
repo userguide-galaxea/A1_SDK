@@ -1,0 +1,27 @@
+var structpinocchio_1_1GeometryData =
+[
+    [ "GeomIndexList", "structpinocchio_1_1GeometryData.html#a4f8aff1d8b1143d66ce31916c7cbbbfc", null ],
+    [ "Scalar", "structpinocchio_1_1GeometryData.html#a508fc58b5dc3c81865305f6498457063", null ],
+    [ "SE3", "structpinocchio_1_1GeometryData.html#a94eddfcd62bf105518e874020629f177", null ],
+    [ "Options", "structpinocchio_1_1GeometryData.html#abc5c98fcc1211af2b80116dd6e0a035dac59641d0b7afd6206e201ea0829e9bf5", null ],
+    [ "GeometryData", "structpinocchio_1_1GeometryData.html#a60873e8becc5c19c771d248204d48656", null ],
+    [ "GeometryData", "structpinocchio_1_1GeometryData.html#a950d2859c67881c9b8463e260d6d77f1", null ],
+    [ "~GeometryData", "structpinocchio_1_1GeometryData.html#ace84e47746882a62dd18e67a9d80c146", null ],
+    [ "activateCollisionPair", "structpinocchio_1_1GeometryData.html#a59824888b060abc96bdbe4172e2a844e", null ],
+    [ "deactivateCollisionPair", "structpinocchio_1_1GeometryData.html#ac502d5e726d2ebf3532423d17e5d9a5d", null ],
+    [ "fillInnerOuterObjectMaps", "structpinocchio_1_1GeometryData.html#ae2b1e68acb5cb09284c541741f3f0042", null ],
+    [ "PINOCCHIO_ALIGNED_STD_VECTOR", "structpinocchio_1_1GeometryData.html#ac0b52e36d366456c9cee8238258b27a6", null ],
+    [ "operator<<", "structpinocchio_1_1GeometryData.html#ab485f712a3cfbd484f56afbd52b1896a", null ],
+    [ "activeCollisionPairs", "structpinocchio_1_1GeometryData.html#a8021234251b08a713fea73d008f9613b", null ],
+    [ "collisionPairIndex", "structpinocchio_1_1GeometryData.html#a21c41401602fa49a35a31a8e743dbde6", null ],
+    [ "collisionRequests", "structpinocchio_1_1GeometryData.html#a0c1eb58ccefb480e2c0bfe11d99504b3", null ],
+    [ "collisionResults", "structpinocchio_1_1GeometryData.html#aa5081bc8a065c8458f93a7d8a3580f0d", null ],
+    [ "distanceRequests", "structpinocchio_1_1GeometryData.html#ac8242e837b532efc658f9119bce63367", null ],
+    [ "distanceResults", "structpinocchio_1_1GeometryData.html#a6aca01393b1a7e3de98ca73178378d25", null ],
+    [ "innerObjects", "structpinocchio_1_1GeometryData.html#afae253dbffceefe11ef6ab7c300ba868", null ],
+    [ "outerObjects", "structpinocchio_1_1GeometryData.html#a479704f3372a5c5abdb76658d1f1628f", null ],
+    [ "PINOCCHIO_DEPRECATED", "structpinocchio_1_1GeometryData.html#a6de11bf887660e922717efdbc35bc2ee", null ],
+    [ "PINOCCHIO_DEPRECATED", "structpinocchio_1_1GeometryData.html#ac9cea964e82960d2246303370439afed", null ],
+    [ "PINOCCHIO_DEPRECATED", "structpinocchio_1_1GeometryData.html#abab68851438d8f7e22b8f172e1edca39", null ],
+    [ "radius", "structpinocchio_1_1GeometryData.html#ade27cc447485a088328972499687a456", null ]
+];
