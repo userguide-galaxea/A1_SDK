@@ -1,4 +1,4 @@
-prefix=/home/jiaruiqian/work/ws_0622/install
+prefix=/home/gerunze/Downloads/ci_pipeline/workspace/install
 
 Name: ocs2_qp_solver
 Description: Description of ocs2_qp_solver

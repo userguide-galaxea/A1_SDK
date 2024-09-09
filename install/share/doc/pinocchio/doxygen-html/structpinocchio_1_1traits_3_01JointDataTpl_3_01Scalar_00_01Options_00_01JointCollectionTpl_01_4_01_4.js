@@ -1,4 +1,0 @@
-var structpinocchio_1_1traits_3_01JointDataTpl_3_01Scalar_00_01Options_00_01JointCollectionTpl_01_4_01_4 =
-[
-    [ "JointDerived", "structpinocchio_1_1traits_3_01JointDataTpl_3_01Scalar_00_01Options_00_01JointCollectionTpl_01_4_01_4.html#a828404a12e7c9ae99923f0cfe974c6e1", null ]
-];

@@ -1,4 +1,0 @@
-var structpinocchio_1_1SE3GroupAction_3_01ConstraintPrismaticTpl_3_01Scalar_00_01Options_00_01axis_01_4_01_4 =
-[
-    [ "ReturnType", "structpinocchio_1_1SE3GroupAction_3_01ConstraintPrismaticTpl_3_01Scalar_00_01Options_00_01axis_01_4_01_4.html#a5a13637f0c2068128ac4de0fe28b8fff", null ]
-];

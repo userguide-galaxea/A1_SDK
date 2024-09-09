@@ -1,0 +1,49 @@
+<launch>
+      <!-- Enable rviz visualization -->
+      <arg name="rviz" default="true" />
+      <!-- Set nodes on debug mode -->
+      <arg name="debug" default="false" />
+
+      <!-- The URDF model of the robot -->
+      <arg name="urdfFile" value="$(find mobiman)/urdf/A1/urdf/A1_URDF_0607_0028.urdf" />
+      <arg name="taskFile" value="$(find mobiman)/config/task.info" />
+      <!-- The library folder to generate CppAD codegen into -->
+      <arg name="libFolder" value="$(find mobiman)/auto_generated/x1_robot" />
+      <!-- Topic name -->
+      <arg name="joint_states_host_topic" value="/joint_states_host_left" />
+      <arg name="joint_states_slave_topic" value="/joint_states_slave_left" />
+      <arg name="arm_joint_target_position" value="/arm_joint_target_position_slave_left" />
+      <arg name="arm_joint_command_slave_topic" value="/arm_joint_command_slave_left" />
+      <arg name="arm_joint_command_host_topic" value="/arm_joint_command_host_left" />
+      <arg name="gripper_position_command_slave_topic" value="/gripper_position_control_slave_left" />
+      <arg name="gripper_position_command_host_topic" value="/gripper_position_control_host_left" />
+      <arg name="eePose_sub_topic" value="/joint_states" />
+      <arg name="eePose_pub_topic" value="/end_effector_pose" />
+
+      <!-- jointTracker_ -->
+      <node pkg="mobiman" type="jointTracker_demo_node" name="jointTracker_demo_node_left" output="screen" >
+            <param name="joint_states_sub_topic" value="$(arg joint_states_slave_topic)"/>
+            <param name="arm_joint_command_topic" value="$(arg arm_joint_command_slave_topic)"/>
+            <param name="arm_joint_target_position" value="$(arg arm_joint_target_position)"/>
+            <param name="taskFile" value="$(arg taskFile)" />
+            <param name="urdfFile" value="$(arg urdfFile)" />
+            <param name="libFolder" value="$(arg libFolder)" />
+            <param name="high_tracking_mode" value="high" />
+      </node>  
+      <!--  mobiman_tabletop_tele_node -->
+      <param name="taskFile" value="$(arg taskFile)" />
+      <param name="urdfFile" value="$(arg urdfFile)" />
+      <param name="libFolder" value="$(arg libFolder)" />
+      <param name="joint_states_host_topic" value="$(arg joint_states_host_topic)" />
+      <param name="joint_states_slave_topic" value="$(arg joint_states_slave_topic)" />
+      <param name="arm_joint_target_position_slave_topic" value="$(arg arm_joint_target_position)" />
+      <param name="arm_joint_command_host_topic" value="$(arg arm_joint_command_host_topic)" />
+      <param name="gripper_position_command_slave_topic" value="$(arg gripper_position_command_slave_topic)" />
+      <param name="gripper_position_command_host_topic" value="$(arg gripper_position_command_host_topic)" />
+
+      <node if="$(arg debug)" pkg="mobiman" type="mobiman_tabletop_tele_node" name="mobiman_tabletop_tele_node_left"
+            output="screen" launch-prefix="gdb -ex run --args" />
+
+      <node unless="$(arg debug)" pkg="mobiman" type="mobiman_tabletop_tele_node" name="mobiman_tabletop_tele_node_left"
+          output="screen" launch-prefix="" />
+</launch>

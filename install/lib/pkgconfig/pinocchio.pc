@@ -1,13 +1,13 @@
-prefix=/home/jiaruiqian/work/ws_0622/install
-exec_prefix=/home/jiaruiqian/work/ws_0622/install
-libdir=/home/jiaruiqian/work/ws_0622/install/lib
-bindir=/home/jiaruiqian/work/ws_0622/install/bin
-pkglibdir=/home/jiaruiqian/work/ws_0622/install/lib/pinocchio
-includedir=/home/jiaruiqian/work/ws_0622/install/include
-datarootdir=/home/jiaruiqian/work/ws_0622/install/share
-pkgdatarootdir=/home/jiaruiqian/work/ws_0622/install/share
-docdir=/home/jiaruiqian/work/ws_0622/install/share/doc/pinocchio
-doxygendocdir=/home/jiaruiqian/work/ws_0622/install/share/doc/pinocchio/doxygen-html
+prefix=/home/gerunze/Downloads/ci_pipeline/workspace/install
+exec_prefix=/home/gerunze/Downloads/ci_pipeline/workspace/install
+libdir=/home/gerunze/Downloads/ci_pipeline/workspace/install/lib
+bindir=/home/gerunze/Downloads/ci_pipeline/workspace/install/bin
+pkglibdir=/home/gerunze/Downloads/ci_pipeline/workspace/install/lib/pinocchio
+includedir=/home/gerunze/Downloads/ci_pipeline/workspace/install/include
+datarootdir=/home/gerunze/Downloads/ci_pipeline/workspace/install/share
+pkgdatarootdir=/home/gerunze/Downloads/ci_pipeline/workspace/install/share
+docdir=/home/gerunze/Downloads/ci_pipeline/workspace/install/share/doc/pinocchio
+doxygendocdir=/home/gerunze/Downloads/ci_pipeline/workspace/install/share/doc/pinocchio/doxygen-html
 
 Name: pinocchio
 Description: A fast and flexible implementation of Rigid Body Dynamics algorithms and their analytical derivatives
