@@ -1,0 +1,11 @@
+source;share/signal_arm/hook/cmake_prefix_path.ps1
+source;share/signal_arm/hook/cmake_prefix_path.dsv
+source;share/signal_arm/hook/cmake_prefix_path.sh
+source;share/signal_arm/hook/ld_library_path_lib.ps1
+source;share/signal_arm/hook/ld_library_path_lib.dsv
+source;share/signal_arm/hook/ld_library_path_lib.sh
+source;share/signal_arm/local_setup.bash
+source;share/signal_arm/local_setup.dsv
+source;share/signal_arm/local_setup.ps1
+source;share/signal_arm/local_setup.sh
+source;share/signal_arm/local_setup.zsh

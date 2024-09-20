@@ -1,0 +1,88 @@
+<launch>
+
+    <!-- signal_arm argument-->
+
+    <!-- right_host arm -->
+    <arg name="right_host_serial_port_path" default="/dev/right_arm_host"/>
+    <arg name="right_host_joint_states_topic" default="/a1_robot_right/joint_states_host"/>
+    <arg name="right_host_control_topic" default="/a1_robot_right/arm_joint_command_host"/>
+    <arg name="right_host_arm_status_topic" default="/a1_robot_right/arm_status_host"/>
+    <arg name="right_host_gripper_aloha_command_topic" default="/a1_robot_right/gripper_aloha_command_host"/>
+    <arg name="right_host_joint_names" default="right_arm_joint1,right_arm_joint2,right_arm_joint3,right_arm_joint4,right_arm_joint5,right_arm_joint6,right_gripper"/>
+
+    <!-- right_slave arm -->
+    <arg name="right_slave_serial_port_path" default="/dev/right_arm"/>
+    <arg name="right_slave_joint_states_topic" default="/a1_robot_right/joint_states"/>
+    <arg name="right_slave_control_topic" default="/a1_robot_right/arm_joint_command"/>
+    <arg name="right_slave_arm_status_topic" default="/a1_robot_right/arm_status"/>
+    <arg name="right_slave_gripper_aloha_command_topic" default="/a1_robot_right/gripper_aloha_command"/>
+    <arg name="right_slave_joint_names" default="right_arm_joint1,right_arm_joint2,right_arm_joint3,right_arm_joint4,right_arm_joint5,right_arm_joint6,right_gripper"/>
+    
+    <!-- node starter -->
+
+    <!-- right_host arm node -->
+    <node pkg="signal_arm" type="iarm_node" name="right_host" output="screen">
+        <param name="serial_port_path" value="$(arg right_host_serial_port_path)"/>
+        <param name="joint_states_topic" value="$(arg right_host_joint_states_topic)"/>
+        <param name="control_topic" value="$(arg right_host_control_topic)"/>
+        <param name="arm_status_topic" value="$(arg right_host_arm_status_topic)"/>
+        <param name="gripper_topic" value="$(arg right_host_gripper_aloha_command_topic)"/>
+        <param name="joint_names" value="$(arg right_host_joint_names)"/>
+    </node>
+
+    <!-- right_slave arm node -->
+    <node pkg="signal_arm" type="iarm_node" name="right_slave" output="screen">
+        <param name="serial_port_path" value="$(arg right_slave_serial_port_path)"/>
+        <param name="joint_states_topic" value="$(arg right_slave_joint_states_topic)"/>
+        <param name="control_topic" value="$(arg right_slave_control_topic)"/>
+        <param name="arm_status_topic" value="$(arg right_slave_arm_status_topic)"/>
+        <param name="gripper_topic" value="$(arg right_slave_gripper_aloha_command_topic)"/>
+        <param name="joint_names" value="$(arg right_slave_joint_names)"/>
+    </node>
+
+      <!-- Enable rviz visualization -->
+      <arg name="rviz" default="true" />
+      <!-- Set nodes on debug mode -->
+      <arg name="debug" default="true" />
+
+      <!-- The URDF model of the robot -->
+      <arg name="urdfFile_left" value="$(find mobiman)/../r1_urdf/r1_hosturdf/urdf/r1_hosturdf_left_arm.urdf" />
+      <arg name="urdfFile_right" value="$(find mobiman)/../r1_urdf/r1_hosturdf/urdf/r1_hosturdf_right_arm.urdf" />
+      <arg name="urdfFile_right_host" value="$(find mobiman)/../r1_urdf/r1_hosturdf/urdf/r1_hosturdf_right_arm.urdf" />
+      <arg name="urdfFile_right_slave" value="$(find mobiman)/../r1_urdf/r1_urdf_V104/URDF_R1_V1_0_4/urdf/URDF_R1_V1_0_4_fixed_torso.urdf"/>    <!--  "$(find mobiman)/../r1_urdf/r1_hosturdf/urdf/r1_hosturdf_right_arm.urdf" />   -->
+      
+      <arg name="taskFile" value="$(find mobiman)/config/task_new_r1.info" />
+
+      <!-- The library folder to generate CppAD codegen into -->
+      <arg name="libFolder_right" value="$(find mobiman)/auto_generated/r1_robot_right" />
+
+      <param name="taskFile" value="$(arg taskFile)" />
+      <param name="urdfFile_left" value="$(arg urdfFile_left)" />
+      <param name="urdfFile_right_host" value="$(arg urdfFile_right_host)" />
+      <param name="urdfFile_right_slave" value="$(arg urdfFile_right_slave)" />
+      <param name="libFolder_right" value="$(arg libFolder_right)" />
+      <param name="vel" value="true" />
+
+      <param name="dt_scaling" value="1.2" type="double" />
+
+      <param name="/use_sim_time" value="false" />
+
+
+            <!-- The URDF model of the robot -->
+
+
+      <node if="$(arg debug)" pkg="mobiman" type="mobiman_aloha_right_node" name="mobiman_aloha_right_node"
+                  output="screen" launch-prefix="gdb -ex run --args" />
+
+      <node unless="$(arg debug)" pkg="mobiman" type="mobiman_aloha_right_node"
+                  name="mobiman_aloha_right_node"
+                  output="screen" launch-prefix="" />
+	
+	  <!-- 启动右臂节点 -->
+  <node pkg="galaxea_kinematics" type="pose_publisher_node" name="right_arm_ee_pub" output="screen">
+    <param name="arm_name" value="right_arm" />
+    <param name="urdf_file" value="$(find URDF_R1_V1_0_4)/urdf/URDF_R1_V1_0_4_fixed_torso.urdf" />
+  </node>
+
+
+</launch>

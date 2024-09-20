@@ -1,0 +1,45 @@
+<launch>
+  <arg name="model" />
+
+  <arg name="eePose_sub_topic" value="/joint_states"/>
+  <arg name="eePose_pub_topic" value="/end_effector_pose"/>
+  <arg name="left_joint_states_sub_topic" value="/joint_states_left"/>
+  <arg name="left_arm_joint_command_topic" value="/left_arm_joint_command"/>
+  <arg name="right_joint_states_sub_topic" value="/joint_states_right"/>
+  <arg name="right_arm_joint_command_topic" value="/right_arm_joint_command"/>
+  <!-- 启动 my_rviz_node -->
+  <node pkg="mobiman" type="r1_jointTracker_demo_node"
+        name="r1_jointTracker_demo_node" output="screen" />
+  <node pkg="mobiman" type="eepose_pub_node" name="eePose_pub_node" output="screen">
+  </node>
+  <param name="eePose_sub_topic" value="$(arg eePose_sub_topic)"/>
+  <param name="eePose_pub_topic" value="$(arg eePose_pub_topic)"/>
+  <param name="left_joint_states_sub_topic" value="$(arg left_joint_states_sub_topic)"/>
+  <param name="left_arm_joint_command_topic" value="$(arg left_arm_joint_command_topic)"/>
+  <param name="right_joint_states_sub_topic" value="$(arg right_joint_states_sub_topic)"/>
+  <param name="right_arm_joint_command_topic" value="$(arg right_arm_joint_command_topic)"/>
+
+  <param
+    name="robot_description"
+    textfile="$(find mobiman)/urdf/R1/urdf/URDF_R1_V1_0_4.urdf" />
+
+  <arg name="urdfFile" value="$(find mobiman)/urdf/R1/urdf/URDF_R1_V1_0_4.urdf" />
+  <arg name="left_taskFile" value="$(find mobiman)/config/task_left.info" />
+  <arg name="left_libFolder" value="$(find mobiman)/auto_generated/r1_robot_left" />
+  <arg name="right_taskFile" value="$(find mobiman)/config/task_right.info" />
+  <arg name="right_libFolder" value="$(find mobiman)/auto_generated/r1_robot_right" />
+
+  <param name="left_taskFile" value="$(arg left_taskFile)" />
+  <param name="right_taskFile" value="$(arg right_taskFile)" />
+  <param name="urdfFile" value="$(arg urdfFile)" />
+  <param name="left_libFolder" value="$(arg left_libFolder)" />
+  <param name="right_libFolder" value="$(arg right_libFolder)" />
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz" />
+</launch>

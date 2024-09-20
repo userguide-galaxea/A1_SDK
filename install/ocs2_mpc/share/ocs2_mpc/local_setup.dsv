@@ -1,0 +1,3 @@
+source;share/ocs2_mpc/environment/ament_prefix_path.sh
+source;share/ocs2_mpc/environment/library_path.sh
+source;share/ocs2_mpc/environment/path.sh

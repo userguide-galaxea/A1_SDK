@@ -1,0 +1,12 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from mobiman_msgs/msg/JointPosition.msg
+// generated code does not contain a copyright notice
+
+
+module mobiman_msgs {
+  module msg {
+    struct JointPosition {
+      sequence<float> pos;
+    };
+  };
+};

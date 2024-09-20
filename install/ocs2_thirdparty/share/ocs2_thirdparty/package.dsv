@@ -1,0 +1,8 @@
+source;share/ocs2_thirdparty/hook/cmake_prefix_path.ps1
+source;share/ocs2_thirdparty/hook/cmake_prefix_path.dsv
+source;share/ocs2_thirdparty/hook/cmake_prefix_path.sh
+source;share/ocs2_thirdparty/local_setup.bash
+source;share/ocs2_thirdparty/local_setup.dsv
+source;share/ocs2_thirdparty/local_setup.ps1
+source;share/ocs2_thirdparty/local_setup.sh
+source;share/ocs2_thirdparty/local_setup.zsh

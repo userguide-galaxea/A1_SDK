@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from mobiman_msgs/msg/ArmBasicCommand.msg
+// generated code does not contain a copyright notice
+
+#include "mobiman_msgs/msg/JointPosition.idl"
+#include "mobiman_msgs/msg/JointSpeed.idl"
+#include "std_msgs/msg/Header.idl"
+
+module mobiman_msgs {
+  module msg {
+    struct ArmBasicCommand {
+      std_msgs::msg::Header header;
+
+      mobiman_msgs::msg::JointPosition jpos;
+
+      mobiman_msgs::msg::JointSpeed jspeed;
+    };
+  };
+};

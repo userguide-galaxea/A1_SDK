@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ocs2_msgs/srv/Reset.srv
+// generated code does not contain a copyright notice
+
+#include "ocs2_msgs/msg/MpcTargetTrajectories.idl"
+
+module ocs2_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Reset service ")
+    struct Reset_Request {
+      boolean reset;
+
+      ocs2_msgs::msg::MpcTargetTrajectories target_trajectories;
+    };
+    struct Reset_Response {
+      boolean done;
+    };
+  };
+};

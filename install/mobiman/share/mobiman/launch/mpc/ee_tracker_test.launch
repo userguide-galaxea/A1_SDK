@@ -1,0 +1,39 @@
+<launch>
+  <arg
+    name="model" />
+  <arg name="rviz" default="true" />
+  <param
+    name="robot_description"
+    textfile="$(find A1_URDF)/urdf/A1_URDF.urdf" />
+
+  <arg name="urdfFile" value="$(find mobiman)/../A1_URDF/urdf/A1_URDF.urdf" />
+  <arg name="taskFile" value="$(find mobiman)/config/task_new.info" />
+  <arg name="angleFile" value="$(find mobiman)/data/joint_angles.txt" />
+
+  <!-- The library folder to generate CppAD codegen into -->
+  <arg name="libFolder" value="$(find mobiman)/auto_generated/x1_robot" />
+
+  <param name="taskFile" value="$(arg taskFile)" />
+  <param name="urdfFile" value="$(arg urdfFile)" />
+  <param name="libFolder" value="$(arg libFolder)" />
+
+  <!-- 启动 mpc node -->
+  <node pkg="mobiman" type="eeTracker_test_node"
+        name="eeTracker_test_node" output="screen" />
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf" output="screen"
+          args="0 0 0 0 0 0 world base_link"/>
+
+  <node if="$(arg rviz)" pkg="ocs2_mobile_manipulator_ros" type="mobile_manipulator_target" name="mobile_manipulator_target"
+      output="screen" launch-prefix="" />
+  
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find a1_arm_v3)/a1_arm_v3.rviz" />
+</launch>

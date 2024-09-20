@@ -1,0 +1,3 @@
+source;share/ocs2_self_collision_visualization/environment/ament_prefix_path.sh
+source;share/ocs2_self_collision_visualization/environment/library_path.sh
+source;share/ocs2_self_collision_visualization/environment/path.sh

@@ -1,8 +1,0 @@
-prefix=/home/gerunze/Downloads/ci_pipeline/workspace/install
-
-Name: URDF_R1_V1_0_4
-Description: Description of URDF_R1_V1_0_4
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,0 +1,4 @@
+# generated from rosidl_cmake/cmake/rosidl_cmake-extras.cmake.in
+
+set(mobiman_msgs_IDL_FILES "msg/ArmBasicCommand.idl;msg/ArmControl.idl;msg/Button3d.idl;msg/ButtonSemantics.idl;msg/ChassisCommand.idl;msg/ChassisCommandStamped.idl;msg/JointPosition.idl;msg/JointPositionStamped.idl;msg/JointSpeed.idl;msg/JointSpeedStamped.idl;msg/Mask.idl;msg/CameraDetection.idl;msg/Panel3d.idl;srv/PoseArrayService.idl;srv/IKService.idl")
+set(mobiman_msgs_INTERFACE_FILES "msg/ArmBasicCommand.msg;msg/ArmControl.msg;msg/Button3d.msg;msg/ButtonSemantics.msg;msg/ChassisCommand.msg;msg/ChassisCommandStamped.msg;msg/JointPosition.msg;msg/JointPositionStamped.msg;msg/JointSpeed.msg;msg/JointSpeedStamped.msg;msg/Mask.msg;msg/CameraDetection.msg;msg/Panel3d.msg;srv/PoseArrayService.srv;srv/PoseArrayService_Request.msg;srv/PoseArrayService_Response.msg;srv/IKService.srv;srv/IKService_Request.msg;srv/IKService_Response.msg")

@@ -1,0 +1,7 @@
+<launch>
+    <arg name="model" default="$(find x1_robot_description)/urdf/x1_robot.xacro"/>
+    <param name="robot_description" command="$(find xacro)/xacro '$(arg model)'" />
+    <node name="play" pkg="rosbag" type="play" args="/home/zpyang/Pictures/2024-01-23-19-27-00.bag -l"/>
+    <node name="static_tf" pkg="tf" type="static_transform_publisher" 
+    args="0 0 -0.95 0 0 0 base_link base_link_robot 100"/>
+</launch>

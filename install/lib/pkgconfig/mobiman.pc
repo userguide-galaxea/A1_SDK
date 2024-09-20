@@ -1,8 +1,0 @@
-prefix=/home/gerunze/Downloads/ci_pipeline/workspace/install
-
-Name: mobiman
-Description: Description of mobiman
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lmobiman
-Requires: roscpp trac_ik_lib controller_interface std_msgs geometry_msgs sensor_msgs realtime_tools tf tf_conversions pluginlib mobiman_msgs signal_arm signal_torso ocs2_ros_interfaces ocs2_core ocs2_ddp ocs2_mpc ocs2_robotic_tools ocs2_robotic_assets ocs2_pinocchio_interface ocs2_self_collision ocs2_self_collision_visualization ocs2_mobile_manipulator ocs2_mobile_manipulator_ros

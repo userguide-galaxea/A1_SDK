@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from signal_arm_msgs/srv/FunctionFrame.srv
+// generated code does not contain a copyright notice
+
+
+module signal_arm_msgs {
+  module srv {
+    struct FunctionFrame_Request {
+      uint8 command;
+    };
+    struct FunctionFrame_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

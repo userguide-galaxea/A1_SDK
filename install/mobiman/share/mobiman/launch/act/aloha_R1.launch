@@ -1,0 +1,58 @@
+<launch>
+      <!-- Enable rviz visualization -->
+      <arg name="rviz" default="false" />
+      <!-- Set nodes on debug mode -->
+      <arg name="debug" default="true" />
+
+      <!-- The URDF model of the robot -->
+      <arg name="urdfFile_left_host" value="$(find mobiman)/../r1_urdf/r1_hosturdf/urdf/r1_hosturdf_left_arm.urdf" />
+      <arg name="urdfFile_left_slave" value="$(find mobiman)/../r1_urdf/r1_hosturdf/urdf/r1_hosturdf_left_arm.urdf" />
+      <arg name="urdfFile_right_host" value="$(find mobiman)/../r1_urdf/r1_hosturdf/urdf/r1_hosturdf_right_arm.urdf" />
+      <arg name="urdfFile_right_slave" value="$(find mobiman)/../r1_urdf/r1_hosturdf/urdf/r1_hosturdf_right_arm.urdf" />
+      <arg name="urdfFile_aloha" value="$(find mobiman)/../r1_urdf/r1_hosturdf/urdf/r1_hosturdf.urdf" />
+      <arg name="taskFile" value="$(find mobiman)/config/task.info" />
+      <arg name="model" default="$(arg urdfFile_aloha)"/>
+
+      <!-- The library folder to generate CppAD codegen into -->
+      <arg name="libFolder_left" value="$(find mobiman)/auto_generated/r1_robot_left" />
+      <arg name="libFolder_right" value="$(find mobiman)/auto_generated/r1_robot_right" />
+      <param name="taskFile" value="$(arg taskFile)" />
+      <param name="urdfFile_left_host" value="$(arg urdfFile_left_host)" />
+      <param name="urdfFile_left_slave" value="$(arg urdfFile_left_slave)" />
+      <param name="urdfFile_right_host" value="$(arg urdfFile_right_host)" />
+      <param name="urdfFile_right_slave" value="$(arg urdfFile_right_slave)" />
+      <param name="libFolder_left" value="$(arg libFolder_left)" />
+      <param name="libFolder_right" value="$(arg libFolder_right)" />
+
+      <param name="vel" value="true" />
+
+      <param name="dt_scaling" value="1.2" type="double" />
+
+      <param name="/use_sim_time" value="false" />
+
+      <group if="$(arg rviz)">
+            <include file="$(find ocs2_mobile_manipulator_ros)/launch/include/visualize.launch">
+                  <arg name="urdfFile" value="$(arg urdfFile_aloha)" />
+            </include>
+      </group>
+      <param name="robot_description" command="$(find xacro)/xacro '$(arg model)'" />
+            <!-- The URDF model of the robot -->
+
+
+      <node if="$(arg debug)" pkg="mobiman" type="mobiman_aloha_left_node" name="mobiman_aloha_left_node"
+                  output="screen" launch-prefix="gdb -ex run --args" />
+
+      <node unless="$(arg debug)" pkg="mobiman" type="mobiman_aloha_left_node"
+                  name="mobiman_aloha_left_node"
+                  output="screen" launch-prefix="" />
+
+
+
+      <node if="$(arg debug)" pkg="mobiman" type="mobiman_aloha_right_node" name="mobiman_aloha_right_node"
+                  output="screen" launch-prefix="gdb -ex run --args" />
+
+      <node unless="$(arg debug)" pkg="mobiman" type="mobiman_aloha_right_node"
+                  name="mobiman_aloha_right_node"
+                  output="screen" launch-prefix="" />
+
+</launch>

@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from mobiman_msgs/msg/ButtonSemantics.msg
+// generated code does not contain a copyright notice
+
+
+module mobiman_msgs {
+  module msg {
+    struct ButtonSemantics {
+      string name;
+
+      uint8 button_status;
+    };
+  };
+};

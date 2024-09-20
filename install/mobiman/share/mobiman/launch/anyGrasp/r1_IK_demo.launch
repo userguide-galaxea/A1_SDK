@@ -1,0 +1,59 @@
+<launch>
+  <arg name="model" />
+    <!-- signal_arm argument-->
+    <!-- left_slave arm -->
+    <arg name="left_slave_serial_port_path" default="/dev/left_arm_slave"/>
+    <arg name="left_slave_joint_states_topic" default="/a1_robot_left/joint_states"/>
+    <arg name="left_slave_control_topic" default="/a1_robot_left/arm_joint_command"/>
+    <arg name="left_slave_arm_status_topic" default="/a1_robot_left/arm_status"/>
+    <arg name="left_slave_gripper_aloha_command_topic" default="/a1_robot_left/gripper_aloha_command"/>
+    <arg name="left_slave_joint_names" default="left_arm_joint1,left_arm_joint2,left_arm_joint3,left_arm_joint4,left_arm_joint5,left_arm_joint6,left_gripper"/>
+    
+    <!-- right_slave arm -->
+    <arg name="right_slave_serial_port_path" default="/dev/right_arm_slave"/>
+    <arg name="right_slave_joint_states_topic" default="/a1_robot_right/joint_states"/>
+    <arg name="right_slave_control_topic" default="/a1_robot_right/arm_joint_command"/>
+    <arg name="right_slave_arm_status_topic" default="/a1_robot_right/arm_status"/>
+    <arg name="right_slave_gripper_aloha_command_topic" default="/a1_robot_right/gripper_aloha_command"/>
+    <arg name="right_slave_joint_names" default="right_arm_joint1,right_arm_joint2,right_arm_joint3,right_arm_joint4,right_arm_joint5,right_arm_joint6,right_gripper"/>
+  
+  <!-- node starter -->
+  <!-- left_slave arm node -->
+  <!-- <node pkg="signal_arm" type="iarm_node" name="left_slave" output="screen">
+    <param name="serial_port_path" value="$(arg left_slave_serial_port_path)"/>
+        <param name="joint_states_topic" value="$(arg left_slave_joint_states_topic)"/>
+        <param name="control_topic" value="$(arg left_slave_control_topic)"/>
+        <param name="arm_status_topic" value="$(arg left_slave_arm_status_topic)"/>
+        <param name="gripper_aloha_command_topic" value="$(arg left_slave_gripper_aloha_command_topic)"/>
+        <param name="joint_names" value="$(arg left_slave_joint_names)"/>
+  </node> -->
+
+  <!-- right_slave arm node -->
+  <node pkg="signal_arm" type="iarm_node" name="right_slave" output="screen">
+    <param name="serial_port_path" value="$(arg right_slave_serial_port_path)"/>
+    <param name="joint_states_topic" value="$(arg right_slave_joint_states_topic)"/>
+    <param name="control_topic" value="$(arg right_slave_control_topic)"/>
+    <param name="arm_status_topic" value="$(arg right_slave_arm_status_topic)"/>
+    <param name="gripper_aloha_command_topic" value="$(arg right_slave_gripper_aloha_command_topic)"/>
+    <param name="joint_names" value="$(arg right_slave_joint_names)"/>
+  </node>
+  
+  <arg name="urdfFile" value="$(find mobiman)/../r1urdfv20/urdf/r1urdfv20.urdf" />
+  <param name="urdfFile" value="$(arg urdfFile)" />
+  <!-- 启动 my_rviz_node -->
+  <node pkg="mobiman" type="posearrayserver_node"
+        name="posearrayserver_node" output="screen" />
+ 
+  <param
+    name="robot_description"
+    textfile="$(find r1urdfv20)/urdf/r1urdfv20.urdf" />
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find r1urdfv20)/r1urdfv20.rviz" />
+</launch>

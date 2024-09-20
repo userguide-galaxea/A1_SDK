@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from mobiman_msgs/msg/CameraDetection.msg
+// generated code does not contain a copyright notice
+
+#include "mobiman_msgs/msg/Mask.idl"
+#include "sensor_msgs/msg/Image.idl"
+#include "std_msgs/msg/Header.idl"
+
+module mobiman_msgs {
+  module msg {
+    struct CameraDetection {
+      std_msgs::msg::Header header;
+
+      sensor_msgs::msg::Image source_img;
+
+      mobiman_msgs::msg::Mask mask;
+    };
+  };
+};

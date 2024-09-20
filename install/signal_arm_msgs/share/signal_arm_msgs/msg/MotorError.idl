@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from signal_arm_msgs/msg/MotorError.msg
+// generated code does not contain a copyright notice
+
+
+module signal_arm_msgs {
+  module msg {
+    struct MotorError {
+      uint32 error_code;
+
+      sequence<string> error_description;
+    };
+  };
+};

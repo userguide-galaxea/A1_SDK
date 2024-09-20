@@ -1,0 +1,44 @@
+<launch>
+    <arg name="debug" default="false" />
+    <arg name="Follow" default="false"/>
+
+    <!-- The URDF model of the robot -->
+    <arg name="urdfFile" value="$(find x1_dvt_description)/urdf/x1_dvt.urdf" />
+    <arg name="taskFile" value="$(find mobiman)/config/task_ol.info" />
+
+    <!-- The library folder to generate CppAD codegen into -->
+    <arg name="libFolder" value="$(find mobiman)/auto_generated/x1_robot" />
+
+    <param name="taskFile" value="$(arg taskFile)" />
+    <param name="urdfFile" value="$(arg urdfFile)" />
+    <param name="libFolder" value="$(arg libFolder)" />
+
+    <param name="/use_sim_time" value="false" />
+
+    <!-- <node pkg="mobiman" type="cmd_relay_node" name="joint_cmd_relay_node" output="screen"/> -->
+
+    <include file="$(find rm_driver)/launch/robot_arm.launch" >
+        <arg name="Follow" value="$(arg Follow)"/>
+    </include>
+
+    <include file="$(find mobiman)/launch/robot_bringup.launch" />
+
+
+    <include file="$(find mobiman_target)/launch/camera.launch" >
+        <arg name="output" value="log"/>
+    </include>
+    <include file="$(find mobiman_target)/launch/camera_hand.launch" >
+        <arg name="output" value="log"/>
+    </include>
+
+    <node pkg="mobiman_target" type="button_recognition_cmd.py" name="button_recognition" output="log" />
+    <node pkg="mobiman_target" type="mobiman_target_node" name="target_extactor" output="screen" />
+    
+
+    <node if="$(arg debug)" pkg="mobiman" type="mobiman_manager_node" name="mobiman_manager_node"
+    output="screen" launch-prefix="gdb -ex run --args" />
+
+    <node unless="$(arg debug)" pkg="mobiman" type="mobiman_manager_node"
+        name="mobiman_manager_node"
+        output="screen" launch-prefix="" />
+</launch>

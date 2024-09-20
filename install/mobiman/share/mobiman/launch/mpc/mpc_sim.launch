@@ -1,0 +1,50 @@
+<launch>
+      <!-- Enable rviz visualization -->
+      <arg name="rviz" default="true" />
+      <!-- Set nodes on debug mode -->
+      <arg name="debug" default="false" />
+
+      <!-- The URDF model of the robot -->
+      <arg name="urdfFile" value="$(find mobiman)/../arm_1824/urdf/arm_1824.urdf" />
+      <arg name="model" default="$(arg urdfFile)"/>
+      <arg name="taskFile" value="$(find mobiman)/config/task.info" />
+
+      <!-- The library folder to generate CppAD codegen into -->
+      <arg name="libFolder" value="$(find mobiman)/auto_generated/x1_robot" />
+
+      <param name="taskFile" value="$(arg taskFile)" />
+      <param name="urdfFile" value="$(arg urdfFile)" />
+      <param name="libFolder" value="$(arg libFolder)" />
+      <param name="vel" value="true" />
+      
+      <param name="dt_scaling" value="1.2" type="double" />
+
+      <param name="/use_sim_time" value="false" />
+
+      <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf" output="screen"
+            args="0 0 0 0 0 0 world arm_base_link"/>
+a
+      <group if="$(arg rviz)">
+            <include file="$(find ocs2_mobile_manipulator_ros)/launch/include/visualize.launch">
+                  <arg name="urdfFile" value="$(arg urdfFile)" />
+            </include>
+      </group>
+
+      <node if="$(arg debug)" pkg="mobiman" type="mobiman_mpc_mrt_node" name="mobiman_mpc_mrt_node"
+            output="screen" launch-prefix="gdb -ex run --args" />
+
+      <node unless="$(arg debug)" pkg="mobiman" type="mobiman_mpc_mrt_node"
+            name="mobiman_mpc_mrt_node"
+            output="screen" launch-prefix="" />
+
+      <node if="$(arg rviz)" pkg="ocs2_mobile_manipulator_ros" type="mobile_manipulator_target" name="mobile_manipulator_target"
+            output="screen" launch-prefix="" />
+
+
+      <param name="robot_description" command="$(find xacro)/xacro '$(arg model)'" />
+
+      <node pkg="a1_arm_v3" type="a1_dummy_node.py" name="a1_dummy_node" output="screen" />
+
+
+      <!-- gdb -ex -->
+</launch>

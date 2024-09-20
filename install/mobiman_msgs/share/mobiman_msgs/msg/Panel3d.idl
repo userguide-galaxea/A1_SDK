@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from mobiman_msgs/msg/Panel3d.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "geometry_msgs/msg/Vector3.idl"
+#include "mobiman_msgs/msg/Button3d.idl"
+
+module mobiman_msgs {
+  module msg {
+    struct Panel3d {
+      geometry_msgs::msg::Point origin;
+
+      geometry_msgs::msg::Vector3 normal;
+
+      float length;
+
+      float width;
+
+      sequence<mobiman_msgs::msg::Button3d> buttons_3d;
+    };
+  };
+};

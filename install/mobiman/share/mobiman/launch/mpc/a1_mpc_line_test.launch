@@ -1,0 +1,63 @@
+<launch>
+  <arg
+    name="model" />
+  <arg name="rviz" default="true" />
+  <param
+    name="robot_description"
+    textfile="$(find A1_URDF)/urdf/A1_URDF.urdf" />
+
+  <arg name="urdfFile" value="$(find mobiman)/../A1_URDF/urdf/A1_URDF.urdf" />
+  <arg name="taskFile" value="$(find mobiman)/config/task.info" />
+  <arg name="angleFile" value="$(find mobiman)/data/joint_angles.txt" />
+
+  <!-- The library folder to generate CppAD codegen into -->
+  <arg name="libFolder" value="$(find mobiman)/auto_generated/x1_robot" />
+
+  <param name="taskFile" value="$(arg taskFile)" />
+  <param name="urdfFile" value="$(arg urdfFile)" />
+  <param name="libFolder" value="$(arg libFolder)" />
+
+  <!-- 启动 mpc node -->
+  <node pkg="mobiman" type="mpc_line_test_node"
+        name="mpc_line_test_node" output="screen" />
+
+  <!-- <node
+    name="joint_state_publisher_gui"
+    pkg="joint_state_publisher_gui"
+    type="joint_state_publisher_gui" /> -->
+
+    <!-- <arg name="slave_serial_port_path"         default="/dev/ttyACM0"/>
+    <arg name="slave_joint_states_topic"       default="/a1_robot_right/joint_states"/>
+    <arg name="slave_control_topic"            default="/a1_robot_right/arm_joint_command"/>
+    <arg name="slave_arm_status_topic"         default="/arm_status_slave"/>
+    <arg name="slave_gripper_topic"            default="/gripper_joint_command_slave"/>
+    <arg name="slave_joint_names"              default="arm_joint1,arm_joint2,arm_joint3,arm_joint4,arm_joint5,arm_joint6,gripper"/>
+    <arg name="slave_gripper_force_control_topic" default="/gripper_force_control"/>
+
+
+    <node pkg="signal_arm" type="iarm_node" name="iarm_node_slave" output="screen">
+        <param name="serial_port_path"              value="$(arg slave_serial_port_path)"/>
+        <param name="joint_states_topic"            value="$(arg slave_joint_states_topic)"/>
+        <param name="control_topic"                 value="$(arg slave_control_topic)"/>
+        <param name="arm_status_topic"              value="$(arg slave_arm_status_topic)"/>
+        <param name="gripper_topic"                 value="$(arg slave_gripper_topic)"/>
+        <param name="joint_names"                   value="$(arg slave_joint_names)"/>
+        <param name="gripper_force_control_topic"   value="$(arg slave_gripper_force_control_topic)"/>
+    </node> -->
+  
+  <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf" output="screen"
+          args="0 0 0 0 0 0 world base_link"/>
+
+  <node if="$(arg rviz)" pkg="ocs2_mobile_manipulator_ros" type="mobile_manipulator_target" name="mobile_manipulator_target"
+      output="screen" launch-prefix="" />
+  
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find a1_arm_v3)/a1_arm_v3.rviz" />
+</launch>

@@ -1,0 +1,32 @@
+<launch>
+      <!-- Enable rviz visualization -->
+      <arg name="rviz" default="true" />
+      <!-- Set nodes on debug mode -->
+      <arg name="debug" default="false" />
+
+      <!-- The URDF model of the robot -->
+      <arg name="urdfFile" value="$(find mobiman)/urdf/R1/urdf/URDF_R1_V1_0_4.urdf" />
+      <arg name="taskFile" value="$(find mobiman)/config/task.info" />
+
+      <!-- The library folder to generate CppAD codegen into -->
+      <arg name="libFolder" value="$(find mobiman)/auto_generated/R1_robot" />
+
+      <param name="taskFile" value="$(arg taskFile)" />
+      <param name="urdfFile" value="$(arg urdfFile)" />
+      <param name="libFolder" value="$(arg libFolder)" />
+
+      <node if="$(arg debug)" pkg="mobiman" type="torso_control_node" name="torso_control_node"
+            output="screen" launch-prefix="gdb -ex run --args" />
+
+      <node unless="$(arg debug)" pkg="mobiman" type="torso_control_node"
+            name="torso_control_node"
+            output="screen" launch-prefix="" />
+      <param name="urdfFile" value="$(arg urdfFile)" />
+      <arg name="model" default="$(arg urdfFile)"/>
+      <param name="robot_description" command="$(find xacro)/xacro '$(arg model)'" />
+      <group if="$(arg rviz)">
+            <include file="$(find ocs2_mobile_manipulator_ros)/launch/include/visualize.launch">
+                  <arg name="urdfFile" value="$(arg urdfFile)" />
+            </include>
+      </group>
+</launch>

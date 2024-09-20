@@ -1,0 +1,22 @@
+prefix=${pcfiledir}/../..
+exec_prefix=${pcfiledir}/../..
+libdir=${pcfiledir}/../../lib
+bindir=${pcfiledir}/../../bin
+pkglibdir=${pcfiledir}/../../lib/hpp-fcl
+includedir=${pcfiledir}/../../include
+datarootdir=${pcfiledir}/../../share
+pkgdatarootdir=${pcfiledir}/../../share
+docdir=
+doxygendocdir=
+
+Name: hpp-fcl
+Description: HPP fork of FCL -- The Flexible Collision Library
+URL: https://github.com/humanoid-path-planner/hpp-fcl
+Version: 2.4.0
+Requires: eigen3 >= 3.0.0, octomap >= 1.6
+Conflicts: 
+Libs: -L${libdir}  -lhpp-fcl
+Libs.private: 
+Cflags:  -I${includedir} -DHPP_FCL_HAS_OCTOMAP -DHPP_FCL_HAVE_OCTOMAP -DFCL_HAVE_OCTOMAP -DOCTOMAP_MAJOR_VERSION=1 -DOCTOMAP_MINOR_VERSION=9 -DOCTOMAP_PATCH_VERSION=7
+
+

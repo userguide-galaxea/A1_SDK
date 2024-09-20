@@ -1,0 +1,11 @@
+source;share/trac_ik_lib/hook/cmake_prefix_path.ps1
+source;share/trac_ik_lib/hook/cmake_prefix_path.dsv
+source;share/trac_ik_lib/hook/cmake_prefix_path.sh
+source;share/trac_ik_lib/hook/ld_library_path_lib.ps1
+source;share/trac_ik_lib/hook/ld_library_path_lib.dsv
+source;share/trac_ik_lib/hook/ld_library_path_lib.sh
+source;share/trac_ik_lib/local_setup.bash
+source;share/trac_ik_lib/local_setup.dsv
+source;share/trac_ik_lib/local_setup.ps1
+source;share/trac_ik_lib/local_setup.sh
+source;share/trac_ik_lib/local_setup.zsh

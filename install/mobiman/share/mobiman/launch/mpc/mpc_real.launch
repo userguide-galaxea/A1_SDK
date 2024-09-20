@@ -1,0 +1,28 @@
+<launch>
+      <!-- Enable rviz visualization -->
+      <arg name="rviz" default="false" />
+      <!-- Set nodes on debug mode -->
+      <arg name="debug" default="false" />
+
+      <!-- The URDF model of the robot -->
+      <arg name="urdfFile" value="$(find mobiman)/assets/x1_robot.urdf" />
+      <arg name="taskFile" value="$(find mobiman)/config/task.info" />
+
+      <!-- The library folder to generate CppAD codegen into -->
+      <arg name="libFolder" value="$(find mobiman)/auto_generated/x1_robot" />
+
+      <param name="taskFile" value="$(arg taskFile)" />
+      <param name="urdfFile" value="$(arg urdfFile)" />
+      <param name="libFolder" value="$(arg libFolder)" />
+      
+      <param name="dt_scaling" value="1.0" type="double" />
+
+      <node if="$(arg debug)" pkg="mobiman" type="mobiman_mpc_mrt_node" name="mobiman_mpc_mrt_node"
+            output="screen" launch-prefix="gdb -ex run --args" />
+
+      <node unless="$(arg debug)" pkg="mobiman" type="mobiman_mpc_mrt_node"
+            name="mobiman_mpc_mrt_node"
+            output="screen" launch-prefix="" />
+
+      <!-- gdb -ex -->
+</launch>

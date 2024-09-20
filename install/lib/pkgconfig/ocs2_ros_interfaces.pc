@@ -1,8 +1,0 @@
-prefix=/home/gerunze/Downloads/ci_pipeline/workspace/install
-
-Name: ocs2_ros_interfaces
-Description: Description of ocs2_ros_interfaces
-Version: 0.0.0
-Cflags: -I${prefix}/include -I/usr/include/eigen3 -I/usr/include
-Libs: -L${prefix}/lib -locs2_ros_interfaces /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-Requires: roscpp ocs2_msgs ocs2_core ocs2_mpc std_msgs visualization_msgs geometry_msgs interactive_markers

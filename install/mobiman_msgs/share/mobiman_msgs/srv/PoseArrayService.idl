@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from mobiman_msgs/srv/PoseArrayService.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseArray.idl"
+
+module mobiman_msgs {
+  module srv {
+    struct PoseArrayService_Request {
+      geometry_msgs::msg::PoseArray poses;
+    };
+    struct PoseArrayService_Response {
+      boolean success;
+    };
+  };
+};

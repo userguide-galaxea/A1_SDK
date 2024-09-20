@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from ocs2_msgs/msg/MpcInput.msg
+// generated code does not contain a copyright notice
+
+
+module ocs2_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "MPC internal model input vector ")
+    struct MpcInput {
+      sequence<float> value;
+    };
+  };
+};

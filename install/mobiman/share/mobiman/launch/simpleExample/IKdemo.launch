@@ -1,0 +1,40 @@
+<launch>
+  <param
+    name="robot_description"
+    textfile="$(find a1_arm_v3)/urdf/a1_arm_v3.urdf" />
+
+  <arg name="model" default="$(find a1_arm_v3)/urdf/a1_arm_v3.urdf"/>
+  <param name="robot_description" command="$(find xacro)/xacro '$(arg model)'" />
+  
+  <!-- Set nodes on debug mode -->
+  <arg name="debug" default="false" />
+
+  <arg name="urdfFile" value="$(find mobiman)/../a1_arm_v3/urdf/a1_arm_v3.urdf" />
+  <arg name="taskFile" value="$(find mobiman)/config/task.info" />
+
+  <!-- The library folder to generate CppAD codegen into -->
+  <arg name="libFolder" value="$(find mobiman)/auto_generated/x1_robot" />
+
+  <param name="taskFile" value="$(arg taskFile)" />
+  <param name="urdfFile" value="$(arg urdfFile)" />
+  <param name="libFolder" value="$(arg libFolder)" />
+
+  <!-- 启动 my_rviz_node -->
+  <node pkg="mobiman" type="IK_demo"
+        name="IK_demo" output="screen" />
+
+  <!-- <node
+    name="joint_state_publisher_gui"
+    pkg="joint_state_publisher_gui"
+    type="joint_state_publisher_gui" /> -->
+  
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find a1_arm_v3)/a1_arm_v3.rviz" />
+</launch>

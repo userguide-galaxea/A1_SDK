@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from mobiman_msgs/srv/IKService.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+#include "sensor_msgs/msg/JointState.idl"
+
+module mobiman_msgs {
+  module srv {
+    struct IKService_Request {
+      geometry_msgs::msg::Pose pose;
+    };
+    struct IKService_Response {
+      sensor_msgs::msg::JointState joint_states;
+    };
+  };
+};

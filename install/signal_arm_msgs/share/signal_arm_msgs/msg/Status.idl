@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from signal_arm_msgs/msg/Status.msg
+// generated code does not contain a copyright notice
+
+#include "signal_arm_msgs/msg/MotorError.idl"
+
+module signal_arm_msgs {
+  module msg {
+    struct Status {
+      sequence<string> name;
+
+      sequence<signal_arm_msgs::msg::MotorError> motor_errors;
+    };
+  };
+};

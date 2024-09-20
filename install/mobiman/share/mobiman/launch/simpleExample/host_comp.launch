@@ -1,0 +1,22 @@
+<launch>
+  <arg
+    name="model" />
+  <arg name="rviz" default="true" />
+  <param
+    name="robot_description"
+    textfile="$(find r1_hosturdf)/urdf/r1_hosturdf_right_arm.urdf" />
+
+  <arg name="urdfFile" value="$(find r1_hosturdf)/urdf/r1_hosturdf_right_arm.urdf" />
+  <arg name="taskFile" value="$(find mobiman)/config/task_r1.info" />
+
+  <!-- The library folder to generate CppAD codegen into -->
+  <arg name="libFolder" value="$(find mobiman)/auto_generated/x1_robot" />
+
+  <param name="taskFile" value="$(arg taskFile)" />
+  <param name="urdfFile" value="$(arg urdfFile)" />
+  <param name="libFolder" value="$(arg libFolder)" />
+
+  <!-- 启动 mpc node -->
+  <node pkg="mobiman" type="host_comp_node"
+        name="host_comp_node" output="screen" />
+</launch>

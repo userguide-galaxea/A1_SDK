@@ -1,0 +1,18 @@
+<launch>
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher"
+    type="robot_state_publisher" respawn="false" output="screen">
+  </node>
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find mobiman)/config/gazebo_controller.yaml" command="load" />
+
+  <rosparam file="$(find mobiman)/config/gazebo_pid_gains.yaml" command="load" />
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager"
+    type="spawner" output="screen"
+    args="joint_state_controller wheel_chassis_controller arm_basic_controller">
+    <!-- arm_basic_controller -->
+  </node>
+
+</launch>

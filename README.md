@@ -3,6 +3,47 @@ For detailed usage instructions, please refer to the documentation below.
 The URDF files can be found at install/share/mobiman/urdf. 
 Details of the URDF file updates are available in the repository [URDF repository](https://github.com/userguide-galaxea/URDF).
 
-[CONTROL_SDK](README_CONTROL.md)
 
-[DRIVER_SDK](README_DRIVER.md)
+## RViz Demo
+```bash
+#first terminal
+source /opt/ros/humble/setup.bash
+source ${ros2_ws}/install/setup.bash
+ros2 launch mobiman eeTrajTrackerdemo_launch.py
+
+#second terminal
+source /opt/ros/humble/setup.bash
+source ${ros2_ws}/install/setup.bash
+python3 ${ros2_ws}/mobiman/share/mobiman/scripts/eeTrajTrackerdemo.py
+```
+
+After, you can see rviz on your computer as video display.(video path is : `resource/rviz_demo.mp4`)
+<video width="600" controls>
+  <source src="resource/rviz_demo.mp4" type="video/mp4">
+</video>
+
+## A1 eeTrajTrackerDemo
+```bash
+#first terminal
+source /opt/ros/humble/setup.bash
+source ${ros2_ws}/install/setup.bash
+sudo chmod 777 /dev/ttyACM0
+ros2 launch signal_arm single_arm_node_launch.py
+
+#second terminal
+source /opt/ros/humble/setup.bash
+source ${ros2_ws}/install/setup.bash
+ros2 launch mobiman eeTrajTrackerdemo_launch.py
+
+#third terminal
+source /opt/ros/humble/setup.bash
+source ${ros2_ws}/install/setup.bash
+python3 ${ros2_ws}/mobiman/share/mobiman/scripts/eeTrajTrackerdemo.py
+```
+
+After, you can see A1 move as video display.(video path is : `resource/a1_eeTrajTrackerdemo.mp4`)
+
+<video width="600" controls>
+  <source src="resource/a1_eeTrajTrackerdemo.mp4" type="video/mp4">
+</video>
+

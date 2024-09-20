@@ -1,0 +1,8 @@
+source;share/ocs2_mobile_manipulator_ros/hook/cmake_prefix_path.ps1
+source;share/ocs2_mobile_manipulator_ros/hook/cmake_prefix_path.dsv
+source;share/ocs2_mobile_manipulator_ros/hook/cmake_prefix_path.sh
+source;share/ocs2_mobile_manipulator_ros/local_setup.bash
+source;share/ocs2_mobile_manipulator_ros/local_setup.dsv
+source;share/ocs2_mobile_manipulator_ros/local_setup.ps1
+source;share/ocs2_mobile_manipulator_ros/local_setup.sh
+source;share/ocs2_mobile_manipulator_ros/local_setup.zsh

@@ -1,0 +1,1 @@
+rclcpp;tf2;urdf;kdl_parser;robot_state_publisher;visualization_msgs;geometry_msgs;ocs2_core;ocs2_ddp;ocs2_mpc;ocs2_robotic_tools;ocs2_robotic_assets;ocs2_ros_interfaces;ocs2_pinocchio_interface;ocs2_self_collision;ocs2_self_collision_visualization;ocs2_mobile_manipulator;pinocchio

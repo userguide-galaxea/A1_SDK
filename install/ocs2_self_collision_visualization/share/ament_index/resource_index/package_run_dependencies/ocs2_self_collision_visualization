@@ -1,0 +1,1 @@
+rclcpp;std_msgs;geometry_msgs;visualization_msgs;ocs2_core;ocs2_robotic_tools;ocs2_pinocchio_interface;ocs2_ros_interfaces;ocs2_self_collision

@@ -1,0 +1,27 @@
+<launch>
+    <!-- Enable rviz visualization -->
+    <arg name="rviz"        default="true" />
+    <!-- Set nodes on debug mode -->
+    <arg name="debug"       default="false" />
+
+    <!-- The URDF model of the robot -->
+    <arg name="urdfFile"    value="$(find mobiman)/../a1_arm_v3/urdf/a1_arm_v3.urdf" />
+    <arg name="taskFile"    value="$(find mobiman)/config/task.info" />
+
+    <!-- <arg name="urdfFile" value="$(find rm_eco65_description)/urdf/eco65.urdf" />
+    <arg name="taskFile"    value="$(find mobiman)/config/task2.info" /> -->
+
+    <!-- The library folder to generate CppAD codegen into -->
+    <arg name="libFolder"   value="$(find mobiman)/auto_generated/a1_dummy" />
+
+    <include file="$(find ocs2_mobile_manipulator_ros)/launch/include/mobile_manipulator.launch">
+        <arg name="rviz"      value="$(arg rviz)" />
+        <arg name="debug"     value="$(arg debug)" />
+        <arg name="urdfFile"  value="$(arg urdfFile)" />
+        <arg name="taskFile"  value="$(arg taskFile)" />
+        <arg name="libFolder" value="$(arg libFolder)" />
+    </include>
+
+    <!-- <include file="$(find foxglove_bridge)/launch/foxglove_bridge.launch">
+    </include> -->
+</launch>

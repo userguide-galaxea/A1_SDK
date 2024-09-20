@@ -1,0 +1,23 @@
+<launch>
+  <arg name="model" />
+
+  
+  <arg name="urdfFile" value="$(find mobiman)/../r1urdfv20/urdf/r1urdfv20.urdf" />
+
+  <!-- 启动 my_rviz_node -->
+  <node pkg="mobiman" type="r1_demo_Sim"
+        name="r1_demo_Sim" output="screen" />
+
+  <param
+    name="robot_description"
+    textfile="$(find r1urdfv20)/urdf/r1urdfv20.urdf" />
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find r1urdfv20)/r1urdfv20.rviz" />
+</launch>

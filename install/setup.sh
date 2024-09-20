@@ -1,96 +1,45 @@
-#!/usr/bin/env sh
-# generated from catkin/cmake/template/setup.sh.in
+# generated from colcon_core/shell/template/prefix_chain.sh.em
 
-# Sets various environment variables and sources additional environment hooks.
-# It tries it's best to undo changes from a previously sourced setup file before.
-# Supported command line options:
-# --extend: skips the undoing of changes from a previously sourced setup file
-# --local: only considers this workspace but not the chained ones
-# In plain sh shell which doesn't support arguments for sourced scripts you can
-# set the environment variable `CATKIN_SETUP_UTIL_ARGS=--extend/--local` instead.
+# This script extends the environment with the environment of other prefix
+# paths which were sourced when this file was generated as well as all packages
+# contained in this prefix path.
 
-# since this file is sourced either use the provided _CATKIN_SETUP_DIR
-# or fall back to the destination set at configure time
-: ${_CATKIN_SETUP_DIR:=/home/gerunze/Downloads/ci_pipeline/workspace/install}
-_SETUP_UTIL="$_CATKIN_SETUP_DIR/_setup_util.py"
-unset _CATKIN_SETUP_DIR
-
-if [ ! -f "$_SETUP_UTIL" ]; then
-  echo "Missing Python script: $_SETUP_UTIL"
-  return 22
-fi
-
-# detect if running on Darwin platform
-_UNAME=`uname -s`
-_IS_DARWIN=0
-if [ "$_UNAME" = "Darwin" ]; then
-  _IS_DARWIN=1
-fi
-unset _UNAME
-
-# make sure to export all environment variables
-export CMAKE_PREFIX_PATH
-if [ $_IS_DARWIN -eq 0 ]; then
-  export LD_LIBRARY_PATH
-else
-  export DYLD_LIBRARY_PATH
-fi
-unset _IS_DARWIN
-export PATH
-export PKG_CONFIG_PATH
-export PYTHONPATH
-
-# remember type of shell if not already set
-if [ -z "$CATKIN_SHELL" ]; then
-  CATKIN_SHELL=sh
-fi
-
-# invoke Python script to generate necessary exports of environment variables
-# use TMPDIR if it exists, otherwise fall back to /tmp
-if [ -d "${TMPDIR:-}" ]; then
-  _TMPDIR="${TMPDIR}"
-else
-  _TMPDIR=/tmp
-fi
-_SETUP_TMP=`mktemp "${_TMPDIR}/setup.sh.XXXXXXXXXX"`
-unset _TMPDIR
-if [ $? -ne 0 -o ! -f "$_SETUP_TMP" ]; then
-  echo "Could not create temporary file: $_SETUP_TMP"
+# since a plain shell script can't determine its own path when being sourced
+# either use the provided COLCON_CURRENT_PREFIX
+# or fall back to the build time prefix (if it exists)
+_colcon_prefix_chain_sh_COLCON_CURRENT_PREFIX=/home/gerunze/ros2_ws/install
+if [ ! -z "$COLCON_CURRENT_PREFIX" ]; then
+  _colcon_prefix_chain_sh_COLCON_CURRENT_PREFIX="$COLCON_CURRENT_PREFIX"
+elif [ ! -d "$_colcon_prefix_chain_sh_COLCON_CURRENT_PREFIX" ]; then
+  echo "The build time path \"$_colcon_prefix_chain_sh_COLCON_CURRENT_PREFIX\" doesn't exist. Either source a script for a different shell or set the environment variable \"COLCON_CURRENT_PREFIX\" explicitly." 1>&2
+  unset _colcon_prefix_chain_sh_COLCON_CURRENT_PREFIX
   return 1
 fi
-CATKIN_SHELL=$CATKIN_SHELL "$_SETUP_UTIL" $@ ${CATKIN_SETUP_UTIL_ARGS:-} >> "$_SETUP_TMP"
-_RC=$?
-if [ $_RC -ne 0 ]; then
-  if [ $_RC -eq 2 ]; then
-    echo "Could not write the output of '$_SETUP_UTIL' to temporary file '$_SETUP_TMP': may be the disk if full?"
+
+# function to source another script with conditional trace output
+# first argument: the path of the script
+_colcon_prefix_chain_sh_source_script() {
+  if [ -f "$1" ]; then
+    if [ -n "$COLCON_TRACE" ]; then
+      echo "# . \"$1\""
+    fi
+    . "$1"
   else
-    echo "Failed to run '\"$_SETUP_UTIL\" $@': return code $_RC"
+    echo "not found: \"$1\"" 1>&2
   fi
-  unset _RC
-  unset _SETUP_UTIL
-  rm -f "$_SETUP_TMP"
-  unset _SETUP_TMP
-  return 1
-fi
-unset _RC
-unset _SETUP_UTIL
-. "$_SETUP_TMP"
-rm -f "$_SETUP_TMP"
-unset _SETUP_TMP
+}
 
-# source all environment hooks
-_i=0
-while [ $_i -lt $_CATKIN_ENVIRONMENT_HOOKS_COUNT ]; do
-  eval _envfile=\$_CATKIN_ENVIRONMENT_HOOKS_$_i
-  unset _CATKIN_ENVIRONMENT_HOOKS_$_i
-  eval _envfile_workspace=\$_CATKIN_ENVIRONMENT_HOOKS_${_i}_WORKSPACE
-  unset _CATKIN_ENVIRONMENT_HOOKS_${_i}_WORKSPACE
-  # set workspace for environment hook
-  CATKIN_ENV_HOOK_WORKSPACE=$_envfile_workspace
-  . "$_envfile"
-  unset CATKIN_ENV_HOOK_WORKSPACE
-  _i=$((_i + 1))
-done
-unset _i
+# source chained prefixes
+# setting COLCON_CURRENT_PREFIX avoids relying on the build time prefix of the sourced script
+COLCON_CURRENT_PREFIX="/opt/ros/humble"
+_colcon_prefix_chain_sh_source_script "$COLCON_CURRENT_PREFIX/local_setup.sh"
 
-unset _CATKIN_ENVIRONMENT_HOOKS_COUNT
+
+# source this prefix
+# setting COLCON_CURRENT_PREFIX avoids relying on the build time prefix of the sourced script
+COLCON_CURRENT_PREFIX="$_colcon_prefix_chain_sh_COLCON_CURRENT_PREFIX"
+_colcon_prefix_chain_sh_source_script "$COLCON_CURRENT_PREFIX/local_setup.sh"
+
+unset _colcon_prefix_chain_sh_COLCON_CURRENT_PREFIX
+unset _colcon_prefix_chain_sh_source_script
+unset COLCON_CURRENT_PREFIX

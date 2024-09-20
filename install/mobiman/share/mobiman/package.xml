@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>mobiman</name>
+  <version>0.0.0</version>
+  <description>The manipulator package</description>
+
+  <maintainer email="zpyang@todo.todo">zpyang</maintainer>
+  <license>TODO</license>
+
+  <!-- Dependencies -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <build_depend>rclcpp</build_depend>
+  <build_depend>realtime_tools</build_depend>
+  <build_depend>pluginlib</build_depend>
+<!--  <build_depend>tf2_ros</build_depend>-->
+<!--  <build_depend>tf2_geometry_msgs</build_depend>-->
+  <build_depend>urdf</build_depend>
+  <build_depend>kdl_parser</build_depend>
+  <build_depend>robot_state_publisher</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>mobiman_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>trac_ik_lib</build_depend>
+  <build_depend>ocs2_core</build_depend>
+  <build_depend>ocs2_ddp</build_depend>
+  <build_depend>ocs2_mpc</build_depend>
+  <build_depend>ocs2_robotic_tools</build_depend>
+  <build_depend>ocs2_robotic_assets</build_depend>
+  <build_depend>ocs2_ros_interfaces</build_depend>
+  <build_depend>ocs2_pinocchio_interface</build_depend>
+  <build_depend>ocs2_self_collision</build_depend>
+  <build_depend>ocs2_self_collision_visualization</build_depend>
+  <build_depend>ocs2_mobile_manipulator</build_depend>
+  <build_depend>ocs2_mobile_manipulator_ros</build_depend>
+
+  <build_depend>pinocchio</build_depend>
+  <build_depend>signal_arm_msgs</build_depend>
+<!--  <build_depend>signal_torso</build_depend>-->
+
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>realtime_tools</exec_depend>
+  <exec_depend>pluginlib</exec_depend>
+<!--  <exec_depend>tf2_ros</exec_depend>-->
+<!--  <exec_depend>tf2_geometry_msgs</exec_depend>-->
+  <exec_depend>urdf</exec_depend>
+  <exec_depend>kdl_parser</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>mobiman_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>trac_ik_lib</exec_depend>
+  <exec_depend>ocs2_core</exec_depend>
+  <exec_depend>ocs2_ddp</exec_depend>
+  <exec_depend>ocs2_mpc</exec_depend>
+  <exec_depend>ocs2_robotic_tools</exec_depend>
+  <exec_depend>ocs2_robotic_assets</exec_depend>
+  <exec_depend>ocs2_ros_interfaces</exec_depend>
+  <exec_depend>ocs2_pinocchio_interface</exec_depend>
+  <exec_depend>ocs2_self_collision</exec_depend>
+  <exec_depend>ocs2_self_collision_visualization</exec_depend>
+  <exec_depend>ocs2_mobile_manipulator</exec_depend>
+  <exec_depend>ocs2_mobile_manipulator_ros</exec_depend>
+  <exec_depend>pinocchio</exec_depend>
+  <exec_depend>signal_arm_msgs</exec_depend>
+<!--  <exec_depend>signal_torso</exec_depend>-->
+
+
+  <!-- Export tag for plugin configuration -->
+  <export>
+    <build_type>ament_cmake</build_type>
+    <pluginlib plugin="${prefix}/mobiman_basic_controller_plugins.xml"/>
+  </export>
+</package>

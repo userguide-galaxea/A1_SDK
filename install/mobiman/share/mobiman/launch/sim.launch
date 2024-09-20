@@ -1,0 +1,52 @@
+<launch>
+
+    <!-- these are the arguments you can pass this launch file, for example paused:=true -->
+    <!-- <arg name="model" default="$(find x1_robot_description)/urdf/x1_robot_anchored.xacro"/> -->
+    <arg name="model" default="$(find x1_robot_description)/urdf/x1_robot.xacro"/>
+    <arg name="paused" default="false"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="false"/>
+    <arg name="debug" default="false"/>
+    <arg name="joy_dev0" default="/dev/input/js0" />
+
+    <arg name="target" default="$(find mobiman)/assets/target.sdf"/>
+  
+    <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="world_name" value="$(find gazebo_ros)/launch/empty_world.launch"/>
+      <arg name="debug" value="$(arg debug)" />
+      <arg name="gui" value="$(arg gui)" />
+      <arg name="paused" value="$(arg paused)"/>
+      <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+      <arg name="verbose" value="true" />
+      <arg name="pub_clock_frequency" value="500" />
+    </include>
+    
+    <!-- launch tf pub -->
+    <node pkg="mobiman" name="gt_tf_pub" type="tf_pub.py" output="screen"/>
+
+    <!-- launch commander node -->
+    <node pkg="mobiman" name="joy_basic_control" type="joy_cmd_chassis.py" output="screen"/>
+    <node pkg="mobiman" name="joy_target_control" type="joy_cmd_target.py" output="screen"/>
+    
+    <!-- Load the URDF into the ROS Parameter Server -->
+    <param name="robot_description" command="$(find xacro)/xacro '$(arg model)'" />
+
+    <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+    <node name="urdf_spawner1" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+            args="-urdf -model x1_robot -param robot_description"/>
+    
+    <node name="urdf_spawner2" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+    args="-sdf -model target -file $(arg target) -x 1 -z 1"/>
+    
+      <!-- launch joynode -->
+    <remap from='joy' to='joy0'/>
+    <node pkg="joy" type="joy_node" name="joy_node0">
+      <param name="dev" value="$(arg joy_dev0)" />
+      <param name="deadzone" value="0.1" />
+      <param name="autorepeat_rate" value="100" />
+    </node>
+
+    <include file="$(find mobiman)/launch/robot_control_gazebo.launch"/>
+  </launch>
+  

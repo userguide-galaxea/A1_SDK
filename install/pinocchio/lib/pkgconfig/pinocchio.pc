@@ -1,0 +1,22 @@
+prefix=${pcfiledir}/../..
+exec_prefix=${pcfiledir}/../..
+libdir=${pcfiledir}/../../lib
+bindir=${pcfiledir}/../../bin
+pkglibdir=${pcfiledir}/../../lib/pinocchio
+includedir=${pcfiledir}/../../include
+datarootdir=${pcfiledir}/../../share
+pkgdatarootdir=${pcfiledir}/../../share
+docdir=
+doxygendocdir=
+
+Name: pinocchio
+Description: A fast and flexible implementation of Rigid Body Dynamics algorithms and their analytical derivatives
+URL: http://github.com/stack-of-tasks/pinocchio
+Version: 2.6.21
+Requires: eigen3 >= 3.0.5, urdfdom >= 0.2.0, hpp-fcl >= 2.0.0
+Conflicts: 
+Libs: -L${libdir}  -lpinocchio -L/usr/lib/x86_64-linux-gnu -lboost_filesystem -lboost_serialization -lboost_system
+Libs.private: 
+Cflags:  -I${includedir} -DPINOCCHIO_WITH_URDFDOM -DPINOCCHIO_WITH_HPP_FCL
+
+

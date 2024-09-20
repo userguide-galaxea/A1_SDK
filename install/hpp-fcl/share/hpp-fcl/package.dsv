@@ -1,0 +1,17 @@
+source;share/hpp-fcl/hook/cmake_prefix_path.ps1
+source;share/hpp-fcl/hook/cmake_prefix_path.dsv
+source;share/hpp-fcl/hook/cmake_prefix_path.sh
+source;share/hpp-fcl/hook/ld_library_path_lib.ps1
+source;share/hpp-fcl/hook/ld_library_path_lib.dsv
+source;share/hpp-fcl/hook/ld_library_path_lib.sh
+source;share/hpp-fcl/hook/pkg_config.ps1
+source;share/hpp-fcl/hook/pkg_config.dsv
+source;share/hpp-fcl/hook/pkg_config.sh
+source;share/hpp-fcl/hook/pkg_config_path.ps1
+source;share/hpp-fcl/hook/pkg_config_path.dsv
+source;share/hpp-fcl/hook/pkg_config_path.sh
+source;share/hpp-fcl/hook/pkg_config_path_multiarch.ps1
+source;share/hpp-fcl/hook/pkg_config_path_multiarch.dsv
+source;share/hpp-fcl/hook/pkg_config_path_multiarch.sh
+source;share/hpp-fcl/hook/ament_prefix_path.dsv
+source;share/hpp-fcl/hook/python_path.dsv

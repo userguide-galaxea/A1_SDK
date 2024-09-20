@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+
+<launch>
+      <!-- Enable rviz visualization -->
+      <arg name="rviz"   default="true" />
+      <!-- Set nodes on debug mode -->
+      <arg name="debug"  default="false" />
+
+      <!-- The URDF model of the robot -->
+      <arg name="urdfFile" />
+      <!-- The task file for the mpc. -->
+      <arg name="taskFile" />
+      <!-- The library folder to generate CppAD codegen into -->
+      <arg name="libFolder" />
+
+      <!-- make the files into global parameters -->
+      <param name="taskFile"   value="$(find mobiman)/config/task.info"/>
+      <param name="urdfFile"   value="$(find mobiman)/../a1_arm_v3/urdf/a1_arm_v3.urdf" />
+      <param name="libFolder"  value="$(find mobiman)/auto_generated/x1_robot" />
+
+      <group if="$(arg rviz)">
+            <include file="$(find ocs2_mobile_manipulator_ros)/launch/include/visualize.launch">
+                  <arg name="urdfFile" value="$(find mobiman)/../a1_arm_v3/urdf/a1_arm_v3.urdf" />
+            </include>
+      </group>
+
+      <node if="$(arg debug)" pkg="mobiman" type="mobiman_mpc_node" name="mobiman_mpc_node" 
+            output="screen" launch-prefix="gnome-terminal -- gdb -ex run --args" />
+      <node unless="$(arg debug)" pkg="mobiman" type="mobiman_mpc_node" name="mobiman_mpc_node" 
+            output="screen" launch-prefix="" />
+
+      <node pkg="mobiman" type="mobiman_dummy_mrt_node" name="mobiman_dummy_mrt_node" 
+            output="screen" launch-prefix="gnome-terminal --" />
+
+      <node if="$(arg rviz)" pkg="mobiman" type="mobiman_target_node" name="mobiman_target_node" 
+            output="screen" launch-prefix="" />
+</launch>

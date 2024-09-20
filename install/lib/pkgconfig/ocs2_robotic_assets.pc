@@ -1,8 +1,0 @@
-prefix=/home/gerunze/Downloads/ci_pipeline/workspace/install
-
-Name: ocs2_robotic_assets
-Description: Description of ocs2_robotic_assets
-Version: 10.3.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,0 +1,66 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from ocs2_msgs/msg/MpcFlattenedController.msg
+// generated code does not contain a copyright notice
+
+#include "ocs2_msgs/msg/ControllerData.idl"
+#include "ocs2_msgs/msg/ModeSchedule.idl"
+#include "ocs2_msgs/msg/MpcInput.idl"
+#include "ocs2_msgs/msg/MpcObservation.idl"
+#include "ocs2_msgs/msg/MpcPerformanceIndices.idl"
+#include "ocs2_msgs/msg/MpcState.idl"
+#include "ocs2_msgs/msg/MpcTargetTrajectories.idl"
+
+module ocs2_msgs {
+  module msg {
+    module MpcFlattenedController_Constants {
+      @verbatim (language="comment", text=
+        "define controllerType Enum values" "\n"        "safety mechanism: message initalization to zero")
+      const uint8 CONTROLLER_UNKNOWN = 0;
+      const uint8 CONTROLLER_FEEDFORWARD = 1;
+      const uint8 CONTROLLER_LINEAR = 2;
+    };
+    @verbatim (language="comment", text=
+      "Flattened controller: A serialized controller")
+    struct MpcFlattenedController {
+      @verbatim (language="comment", text=
+        "what type of controller is this")
+      uint8 controller_type;
+
+      @verbatim (language="comment", text=
+        "plan initial observation")
+      ocs2_msgs::msg::MpcObservation init_observation;
+
+      @verbatim (language="comment", text=
+        "target trajectory in cost function")
+      ocs2_msgs::msg::MpcTargetTrajectories plan_target_trajectories;
+
+      @verbatim (language="comment", text=
+        "optimized state trajectory from planner")
+      sequence<ocs2_msgs::msg::MpcState> state_trajectory;
+
+      @verbatim (language="comment", text=
+        "optimized input trajectory from planner")
+      sequence<ocs2_msgs::msg::MpcInput> input_trajectory;
+
+      @verbatim (language="comment", text=
+        "time trajectory for stateTrajectory and inputTrajectory")
+      sequence<double> time_trajectory;
+
+      @verbatim (language="comment", text=
+        "array of indices indicating the index of post-event time in the trajectories")
+      sequence<uint16> post_event_indices;
+
+      @verbatim (language="comment", text=
+        "optimal/predefined MPC mode sequence and event times")
+      ocs2_msgs::msg::ModeSchedule mode_schedule;
+
+      @verbatim (language="comment", text=
+        "the actual payload from flatten method: one vector of data per time step")
+      sequence<ocs2_msgs::msg::ControllerData> data;
+
+      @verbatim (language="comment", text=
+        "solver performance indices")
+      ocs2_msgs::msg::MpcPerformanceIndices performance_indices;
+    };
+  };
+};

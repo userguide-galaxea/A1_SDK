@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from mobiman_msgs/msg/ArmControl.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module mobiman_msgs {
+  module msg {
+    struct ArmControl {
+      std_msgs::msg::Header header;
+
+      sequence<float> p_des;
+
+      sequence<float> v_des;
+
+      sequence<float> kp;
+
+      sequence<float> kd;
+
+      sequence<float> t_ff;
+
+      uint8 mode;
+    };
+  };
+};

@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from ocs2_msgs/msg/ModeSchedule.msg
+// generated code does not contain a copyright notice
+
+
+module ocs2_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "MPC mode sequence")
+    struct ModeSchedule {
+      @verbatim (language="comment", text=
+        "event times: its size is equal to the size of phaseSequence minus one")
+      sequence<double> event_times;
+
+      @verbatim (language="comment", text=
+        "mode sequence: e.g., for a quadrupedal robot, it is in the set {0, 1,..., 15}")
+      sequence<int8> mode_sequence;
+    };
+  };
+};
