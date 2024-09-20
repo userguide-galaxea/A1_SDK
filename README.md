@@ -3,6 +3,9 @@ For detailed usage instructions, please refer to the documentation below.
 The URDF files can be found at install/share/mobiman/urdf. 
 Details of the URDF file updates are available in the repository [URDF repository](https://github.com/userguide-galaxea/URDF).
 
+## Software Dependency
+1. Ubuntu 22.04 LTS
+2. ROS Humble
 
 ## RViz Demo
 ```bash
