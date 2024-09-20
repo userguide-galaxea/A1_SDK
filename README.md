@@ -17,7 +17,7 @@ ros2 launch mobiman eeTrajTrackerdemo_launch.py
 #second terminal
 source /opt/ros/humble/setup.bash
 source ${ros2_ws}/install/setup.bash
-python3 ${ros2_ws}/mobiman/share/mobiman/scripts/eeTrajTrackerdemo.py
+python3 ${ros2_ws}/install/mobiman/share/mobiman/scripts/eeTrajTrackerdemo.py
 ```
 
 After, you can see rviz on your computer as video display.(video path is : `resource/rviz_demo.mp4`)
@@ -41,7 +41,7 @@ ros2 launch mobiman eeTrajTrackerdemo_launch.py
 #third terminal
 source /opt/ros/humble/setup.bash
 source ${ros2_ws}/install/setup.bash
-python3 ${ros2_ws}/mobiman/share/mobiman/scripts/eeTrajTrackerdemo.py
+python3 ${ros2_ws}/install/mobiman/share/mobiman/scripts/eeTrajTrackerdemo.py
 ```
 
 After, you can see A1 move as video display.(video path is : `resource/a1_eeTrajTrackerdemo.mp4`)
