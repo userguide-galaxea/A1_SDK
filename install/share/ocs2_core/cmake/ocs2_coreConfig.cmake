@@ -67,14 +67,14 @@ set(ocs2_core_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ocs2_core_SOURCE_PREFIX /home/gerunze/Downloads/ci_pipeline/workspace/src/ocs2/ocs2_core)
-  set(ocs2_core_DEVEL_PREFIX /home/gerunze/Downloads/ci_pipeline/workspace/devel/.private/ocs2_core)
+  set(ocs2_core_SOURCE_PREFIX /home/nvidia/arm_sdk/ci_pipeline/workspace/src/ocs2/ocs2_core)
+  set(ocs2_core_DEVEL_PREFIX /home/nvidia/arm_sdk/ci_pipeline/workspace/devel/.private/ocs2_core)
   set(ocs2_core_INSTALL_PREFIX "")
   set(ocs2_core_PREFIX ${ocs2_core_DEVEL_PREFIX})
 else()
   set(ocs2_core_SOURCE_PREFIX "")
   set(ocs2_core_DEVEL_PREFIX "")
-  set(ocs2_core_INSTALL_PREFIX /home/gerunze/Downloads/ci_pipeline/workspace/install)
+  set(ocs2_core_INSTALL_PREFIX /home/nvidia/arm_sdk/ci_pipeline/workspace/install)
   set(ocs2_core_PREFIX ${ocs2_core_INSTALL_PREFIX})
 endif()
 
@@ -116,7 +116,7 @@ if(NOT "include;/usr/include/eigen3;/usr/include " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "ocs2_core;/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_log.so.1.71.0;/usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so;/usr/lib/x86_64-linux-gnu/libpthread.so;-pthread")
+set(libraries "ocs2_core;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;/usr/lib/aarch64-linux-gnu/libboost_log_setup.so.1.71.0;/usr/lib/aarch64-linux-gnu/libboost_log.so.1.71.0;/usr/lib/gcc/aarch64-linux-gnu/9/libgomp.so;/usr/lib/aarch64-linux-gnu/libpthread.so;-pthread")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/gerunze/Downloads/ci_pipeline/workspace/install/lib;/home/gerunze/Downloads/ci_pipeline/workspace/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/nvidia/arm_sdk/ci_pipeline/workspace/install/lib;/home/nvidia/arm_sdk/ci_pipeline/workspace/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

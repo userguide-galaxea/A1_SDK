@@ -67,14 +67,14 @@ set(ocs2_mobile_manipulator_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ocs2_mobile_manipulator_SOURCE_PREFIX /home/gerunze/Downloads/ci_pipeline/workspace/src/ocs2/ocs2_robotic_examples/ocs2_mobile_manipulator)
-  set(ocs2_mobile_manipulator_DEVEL_PREFIX /home/gerunze/Downloads/ci_pipeline/workspace/devel/.private/ocs2_mobile_manipulator)
+  set(ocs2_mobile_manipulator_SOURCE_PREFIX /home/nvidia/arm_sdk/ci_pipeline/workspace/src/ocs2/ocs2_robotic_examples/ocs2_mobile_manipulator)
+  set(ocs2_mobile_manipulator_DEVEL_PREFIX /home/nvidia/arm_sdk/ci_pipeline/workspace/devel/.private/ocs2_mobile_manipulator)
   set(ocs2_mobile_manipulator_INSTALL_PREFIX "")
   set(ocs2_mobile_manipulator_PREFIX ${ocs2_mobile_manipulator_DEVEL_PREFIX})
 else()
   set(ocs2_mobile_manipulator_SOURCE_PREFIX "")
   set(ocs2_mobile_manipulator_DEVEL_PREFIX "")
-  set(ocs2_mobile_manipulator_INSTALL_PREFIX /home/gerunze/Downloads/ci_pipeline/workspace/install)
+  set(ocs2_mobile_manipulator_INSTALL_PREFIX /home/nvidia/arm_sdk/ci_pipeline/workspace/install)
   set(ocs2_mobile_manipulator_PREFIX ${ocs2_mobile_manipulator_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(ocs2_mobile_manipulator_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "include;/usr/include/eigen3;/usr/include;/home/gerunze/Downloads/ci_pipeline/workspace/install/include;/opt/ros/noetic/include " STREQUAL " ")
+if(NOT "include;/usr/include/eigen3;/usr/include;/home/nvidia/arm_sdk/ci_pipeline/workspace/install/include;/opt/ros/noetic/include " STREQUAL " ")
   set(ocs2_mobile_manipulator_INCLUDE_DIRS "")
-  set(_include_dirs "include;/usr/include/eigen3;/usr/include;/home/gerunze/Downloads/ci_pipeline/workspace/install/include;/opt/ros/noetic/include")
+  set(_include_dirs "include;/usr/include/eigen3;/usr/include;/home/nvidia/arm_sdk/ci_pipeline/workspace/install/include;/opt/ros/noetic/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -116,7 +116,7 @@ if(NOT "include;/usr/include/eigen3;/usr/include;/home/gerunze/Downloads/ci_pipe
   endforeach()
 endif()
 
-set(libraries "ocs2_mobile_manipulator;/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0;pinocchio;boost_filesystem;boost_serialization;boost_system;urdfdom_sensor;urdfdom_model_state;urdfdom_model;urdfdom_world;console_bridge;hpp-fcl;octomap;octomath")
+set(libraries "ocs2_mobile_manipulator;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;pinocchio;boost_filesystem;boost_serialization;boost_system;urdfdom_sensor;urdfdom_model_state;urdfdom_model;urdfdom_world;console_bridge;hpp-fcl;octomap;octomath")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/gerunze/Downloads/ci_pipeline/workspace/install/lib;/home/gerunze/Downloads/ci_pipeline/workspace/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/nvidia/arm_sdk/ci_pipeline/workspace/install/lib;/home/nvidia/arm_sdk/ci_pipeline/workspace/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
