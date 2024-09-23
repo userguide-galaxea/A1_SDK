@@ -1,5 +1,5 @@
 <launch>
-    <arg name="host_serial_port_path"         default="/dev/ttyACM0"/>
+    <arg name="host_serial_port_path"         default="/dev/ttyACM1"/>
     <arg name="host_joint_states_topic"       default="/joint_states_host"/>
     <arg name="host_gripper_feedback_topic"   default="/gripper_stroke_host"/>
     <arg name="host_control_topic"            default="/arm_joint_command_host"/>

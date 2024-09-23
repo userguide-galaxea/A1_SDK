@@ -1,10 +1,10 @@
 
 "use strict";
 
-let PoseArrayService = require('./PoseArrayService.js')
 let IKService = require('./IKService.js')
+let PoseArrayService = require('./PoseArrayService.js')
 
 module.exports = {
-  PoseArrayService: PoseArrayService,
   IKService: IKService,
+  PoseArrayService: PoseArrayService,
 };

@@ -1,4 +1,4 @@
-prefix=/home/gerunze/Downloads/ci_pipeline/workspace/install
+prefix=/home/zhenyu/Downloads/ci_pipeline/workspace/install
 
 Name: signal_arm
 Description: Description of signal_arm
