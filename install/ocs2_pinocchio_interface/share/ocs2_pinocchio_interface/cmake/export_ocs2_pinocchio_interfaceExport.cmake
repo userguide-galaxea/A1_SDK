@@ -55,7 +55,7 @@ add_library(ocs2_pinocchio_interface::ocs2_pinocchio_interface SHARED IMPORTED)
 
 set_target_properties(ocs2_pinocchio_interface::ocs2_pinocchio_interface PROPERTIES
   INTERFACE_COMPILE_OPTIONS "-pthread;-Wfatal-errors;-Wl,--no-as-needed;-fPIC;-DBOOST_ALL_DYN_LINK;-fopenmp;-DPINOCCHIO_WITH_HPP_FCL;-Wno-ignored-attributes;-Wno-invalid-partial-specialization;-DPINOCCHIO_URDFDOM_TYPEDEF_SHARED_PTR;-DPINOCCHIO_URDFDOM_USE_STD_SHARED_PTR"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/gerunze/ros2_ws/install/pinocchio/include;/home/gerunze/ros2_ws/install/hpp-fcl/include;${_IMPORT_PREFIX}/include/ocs2_pinocchio_interface"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/gerunze/ros2_ws/install/hpp-fcl/include;/home/gerunze/ros2_ws/install/pinocchio/include;${_IMPORT_PREFIX}/include/ocs2_pinocchio_interface"
   INTERFACE_LINK_LIBRARIES "ocs2_core::ocs2_core;ocs2_robotic_tools::ocs2_robotic_tools;urdf::urdf;urdfdom::urdfdom_sensor;urdfdom::urdfdom_model_state;urdfdom::urdfdom_model;urdfdom::urdfdom_world;/home/gerunze/ros2_ws/install/hpp-fcl/lib/libhpp-fcl.so;/home/gerunze/ros2_ws/install/pinocchio/lib/libpinocchio.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;/usr/lib/x86_64-linux-gnu/libboost_system.so"
 )
 
