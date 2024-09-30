@@ -1,13 +1,13 @@
-prefix=/home/zhenyu/Downloads/ci_pipeline/workspace/install
-exec_prefix=/home/zhenyu/Downloads/ci_pipeline/workspace/install
-libdir=/home/zhenyu/Downloads/ci_pipeline/workspace/install/lib
-bindir=/home/zhenyu/Downloads/ci_pipeline/workspace/install/bin
-pkglibdir=/home/zhenyu/Downloads/ci_pipeline/workspace/install/lib/hpp-fcl
-includedir=/home/zhenyu/Downloads/ci_pipeline/workspace/install/include
-datarootdir=/home/zhenyu/Downloads/ci_pipeline/workspace/install/share
-pkgdatarootdir=/home/zhenyu/Downloads/ci_pipeline/workspace/install/share
-docdir=/home/zhenyu/Downloads/ci_pipeline/workspace/install/share/doc/hpp-fcl
-doxygendocdir=/home/zhenyu/Downloads/ci_pipeline/workspace/install/share/doc/hpp-fcl/doxygen-html
+prefix=/home/system/Videos/ci_pipeline/workspace/install
+exec_prefix=/home/system/Videos/ci_pipeline/workspace/install
+libdir=/home/system/Videos/ci_pipeline/workspace/install/lib
+bindir=/home/system/Videos/ci_pipeline/workspace/install/bin
+pkglibdir=/home/system/Videos/ci_pipeline/workspace/install/lib/hpp-fcl
+includedir=/home/system/Videos/ci_pipeline/workspace/install/include
+datarootdir=/home/system/Videos/ci_pipeline/workspace/install/share
+pkgdatarootdir=/home/system/Videos/ci_pipeline/workspace/install/share
+docdir=/home/system/Videos/ci_pipeline/workspace/install/share/doc/hpp-fcl
+doxygendocdir=/home/system/Videos/ci_pipeline/workspace/install/share/doc/hpp-fcl/doxygen-html
 
 Name: hpp-fcl
 Description: HPP fork of FCL -- The Flexible Collision Library

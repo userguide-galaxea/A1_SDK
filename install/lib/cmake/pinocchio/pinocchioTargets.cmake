@@ -55,7 +55,7 @@ add_library(pinocchio::pinocchio SHARED IMPORTED)
 
 set_target_properties(pinocchio::pinocchio PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "PINOCCHIO_WITH_URDFDOM;PINOCCHIO_WITH_HPP_FCL;BOOST_MPL_LIMIT_LIST_SIZE=30;BOOST_MPL_LIMIT_VECTOR_SIZE=30"
-  INTERFACE_INCLUDE_DIRECTORIES "/usr/include/eigen3;${_IMPORT_PREFIX}/include;/usr/include;/usr/include;/usr/include;/usr/include;/home/zhenyu/Downloads/ci_pipeline/workspace/install/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/usr/include/eigen3;${_IMPORT_PREFIX}/include;/usr/include;/usr/include;/usr/include;/usr/include;/home/system/Videos/ci_pipeline/workspace/install/include"
   INTERFACE_SYSTEM_INCLUDE_DIRECTORIES "/usr/include/eigen3;/usr/include;/usr/include;/usr/include;/usr/include"
 )
 

@@ -1,4 +1,4 @@
-prefix=/home/zhenyu/Downloads/ci_pipeline/workspace/install
+prefix=/home/system/Videos/ci_pipeline/workspace/install
 
 Name: signal_torso
 Description: Description of signal_torso

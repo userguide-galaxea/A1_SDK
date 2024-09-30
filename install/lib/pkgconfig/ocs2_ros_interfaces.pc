@@ -1,4 +1,4 @@
-prefix=/home/zhenyu/Downloads/ci_pipeline/workspace/install
+prefix=/home/system/Videos/ci_pipeline/workspace/install
 
 Name: ocs2_ros_interfaces
 Description: Description of ocs2_ros_interfaces

@@ -1,4 +1,4 @@
-prefix=/home/zhenyu/Downloads/ci_pipeline/workspace/install
+prefix=/home/system/Videos/ci_pipeline/workspace/install
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild
